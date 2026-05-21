@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+server/node_modules/
+
+# Environment — NEVER commit your API key
+.env
+
+# Build output
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/settings.json
+*.code-workspace
+
+# Logs
+*.log
+npm-debug.log*
+
+# Data (large files)
+data/*.json

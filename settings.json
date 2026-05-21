@@ -1,0 +1,15 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "files.exclude": {
+    "node_modules": true,
+    "dist": true
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "files.associations": {
+    "*.jsx": "javascriptreact"
+  }
+}
