@@ -1,5 +1,4 @@
 import { useState, useRef, useCallback, useEffect } from "react";
-
 // ── ASYCUDA XML Generator ─────────────────────────────────────────────────
 function generateASYCUDAXml(boe, rbzRate) {
   const now = new Date();
@@ -427,6 +426,8 @@ function downloadXml(boe, rbzRate) {
   URL.revokeObjectURL(url);
 }
 
+
+
 // ── PDF Generator ─────────────────────────────────────────────────────────
 async function generateBOEPdf(boe, rbzRate) {
   if (!window.jspdf) {
@@ -672,7 +673,7 @@ const fmtUSD = v => v != null ? `$${Number(v).toLocaleString("en", { minimumFrac
 const fmtPct = v => v != null ? `${(Number(v) * 100).toFixed(1)}%` : "—";
 
 // ── Main Component ────────────────────────────────────────────────────────
-export default function LunaraeV2() {
+export default function LunaraeV2({ onNavigate })  {
   const [view, setView]           = useState("input");  // input | results
   const [docText, setDocText]     = useState("");
   const [fileName, setFileName]   = useState("");
@@ -687,6 +688,7 @@ export default function LunaraeV2() {
   const [pdfLoading, setPdfLoading] = useState(false);
   const [xmlLoading, setXmlLoading] = useState(false);
   const [dragging, setDragging]   = useState(false);
+  const [siRef, setSiRef] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const fileRef = useRef();
   const timerRef = useRef();
@@ -699,14 +701,70 @@ export default function LunaraeV2() {
     return () => clearInterval(timerRef.current);
   }, [loading]);
 
+  useEffect(() => {
+  fetch('/lunarae_si_reference_v2.json')
+    .then(r => r.json())
+    .then(data => setSiRef(data))
+    .catch(e => console.error('Failed to load SI reference:', e));
+}, []);
+
+  const [fileLoading, setFileLoading] = useState(false);
+  const [fileWarning, setFileWarning] = useState("");
+
   const handleFile = useCallback(async (f) => {
     if (!f) return;
     setFileName(f.name);
-    if (f.type === "application/pdf") {
-      setDocText(`[PDF: ${f.name}] — PDF upload noted. Please also paste invoice text for AI processing.`);
-    } else {
-      const text = await f.text();
-      setDocText(text);
+    setFileWarning("");
+    setFileLoading(true);
+
+    try {
+      // Plain text files — read directly in browser, no server needed
+      if (
+        f.type === "text/plain" ||
+        f.type === "text/csv" ||
+        f.name.endsWith(".txt") ||
+        f.name.endsWith(".csv")
+      ) {
+        const text = await f.text();
+        setDocText(text);
+        setFileLoading(false);
+        return;
+      }
+
+      // XML — read directly in browser
+      if (f.type === "application/xml" || f.type === "text/xml" || f.name.endsWith(".xml")) {
+        const text = await f.text();
+        setDocText(text);
+        setFileLoading(false);
+        return;
+      }
+
+      // PDF, DOCX, and everything else — send to server for extraction
+      const formData = new FormData();
+      formData.append("file", f);
+
+      const res = await fetch("http://localhost:4000/api/extract", {
+        method: "POST",
+        body: formData,
+        // No Content-Type header — browser sets it automatically with boundary for FormData
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) throw new Error(data.error || "Extraction failed");
+
+      if (data.warning) {
+        setFileWarning(data.warning);
+      }
+
+      if (data.text) {
+        setDocText(data.text);
+      }
+
+    } catch (e) {
+      setFileWarning(`Could not read file: ${e.message}. Please paste the text manually.`);
+    } finally {
+      setFileLoading(false);
     }
   }, []);
 
@@ -717,14 +775,21 @@ export default function LunaraeV2() {
   };
 
   const run = useCallback(async () => {
-    if (!docText.trim()) return;
+  if (!docText.trim()) return;
+  
+  const systemPrompt = siRef 
+    ? `${SYSTEM}\n\nZIMBABWE CUSTOMS REGULATORY REFERENCE (current as of 2026):\n${JSON.stringify(siRef, null, 2)}`
+    : SYSTEM;
+
     setLoading(true); setResult(null); setError(null); setView("results");
     try {
       const res = await fetch("http://localhost:4000/api/claude", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          system: SYSTEM,
+          model: "claude-sonnet-4-20250514",
+          max_tokens: 4000,
+          system: systemPrompt,   // ← use systemPrompt here instead of SYSTEM
           messages: [{
             role: "user",
             content: `Process this shipping document. Entry Type: ${entryType}. Transport: ${transport}. Port: ${portEntry}. RBZ Rate: ${rbzRate} ZWG/USD.\n\nDOCUMENT:\n${docText}`
@@ -866,6 +931,9 @@ export default function LunaraeV2() {
             fileRef={fileRef} onFileChange={onFileChange}
             onDrop={onDrop} dragging={dragging} setDragging={setDragging}
             loading={loading} run={run} result={result}
+            fileLoading={fileLoading}
+            fileWarning={fileWarning}
+            onNavigate={onNavigate}
             onClose={() => setMobileMenuOpen(false)}
           />
         </div>
@@ -886,6 +954,9 @@ export default function LunaraeV2() {
             fileRef={fileRef} onFileChange={onFileChange}
             onDrop={onDrop} dragging={dragging} setDragging={setDragging}
             loading={loading} run={run} result={result}
+            fileLoading={fileLoading}
+            fileWarning={fileWarning}
+            onNavigate={onNavigate}
           />
         </aside>
 
@@ -1127,7 +1198,7 @@ export default function LunaraeV2() {
 }
 
 // ── Sidebar content (shared between desktop & mobile drawer) ──────────────
-function SidebarContent({ entryType, setEntryType, transport, setTransport, portEntry, setPortEntry, rbzRate, setRbzRate, docText, setDocText, fileName, setFileName, fileRef, onFileChange, onDrop, dragging, setDragging, loading, run, result, onClose }) {
+function SidebarContent({ entryType, setEntryType, transport, setTransport, portEntry, setPortEntry, rbzRate, setRbzRate, docText, setDocText, fileName, setFileName, fileRef, onFileChange, onDrop, dragging, setDragging, loading, run, result, onClose,fileLoading, fileWarning, onNavigate}) {
 
   const loadSample = () => {
     const SAMPLE = `COMMERCIAL INVOICE
@@ -1197,12 +1268,22 @@ Port of Entry: Beitbridge  Transport: Road (TIR: ZA-2024-88234)`;
           <input ref={fileRef} type="file" accept=".pdf,.txt,.csv,.xml" style={{ display: "none" }} onChange={onFileChange} />
           <div style={{ fontSize: 24, marginBottom: 6 }}>📄</div>
           {fileName
-            ? <div style={{ fontSize: 12, color: "#eab308", fontWeight: 500 }}>{fileName}</div>
+            ? <div style={{ fontSize: 12, color: "#eab308", fontWeight: 500 }}>
+                {fileLoading
+                  ? <><span className="spin" style={{ width: 10, height: 10, border: "2px solid rgba(234,179,8,0.3)", borderTop: "2px solid #eab308", borderRadius: "50%", display: "inline-block", marginRight: 6 }} />Reading {fileName}…</>
+                  : `✓ ${fileName}`
+                }
+              </div>
             : <>
-              <div style={{ fontSize: 11.5, color: "#475569" }}>Drop invoice or packing list</div>
-              <div style={{ fontSize: 10, color: "#eab308", marginTop: 4 }}>PDF · TXT · CSV · XML</div>
-            </>
+                <div style={{ fontSize: 11.5, color: "#475569" }}>Drop invoice or packing list</div>
+                <div style={{ fontSize: 10, color: "#eab308", marginTop: 4 }}>PDF · DOCX · TXT · CSV · XML</div>
+              </>
           }
+          {fileWarning && (
+            <div style={{ marginTop: 8, fontSize: 10, color: "#f59e0b", background: "rgba(245,158,11,0.1)", borderRadius: 6, padding: "6px 10px", textAlign: "left" }}>
+              ⚠ {fileWarning}
+            </div>
+          )}
         </div>
 
         <div style={{ fontSize: 10, color: "#334155", margin: "8px 0 6px", textAlign: "center" }}>— or paste text —</div>
@@ -1220,6 +1301,14 @@ Port of Entry: Beitbridge  Transport: Road (TIR: ZA-2024-88234)`;
       </div>
 
       <hr className="hz-rule" />
+
+      <button
+        className="luna-btn"
+        style={{ width: "100%", justifyContent: "center", padding: "10px", marginBottom: 8 }}
+        onClick={() => onNavigate && onNavigate("zimra")}
+      >
+        Go to Zimra BOE Viewer →
+      </button>
 
       <button className="luna-btn luna-btn-primary" style={{ width: "100%", justifyContent: "center", padding: "13px" }} onClick={() => { run(); if (onClose) onClose(); }} disabled={loading || !docText.trim()}>
         {loading

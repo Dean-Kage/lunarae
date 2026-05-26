@@ -1,0 +1,435 @@
+{
+  "version": "2.0",
+  "last_updated": "2026-05-22",
+  "description": "Lunarae Zimbabwe Customs SI Reference Document \u2013 comprehensive summary of all applicable Statutory Instruments for the AI system prompt",
+  "statutory_instruments": [
+    {
+      "si": "SI 35/2024",
+      "title": "Control of Goods (OGIL) Standards Assessment \u2013 CBCA Notice 2024",
+      "effective": "1 March 2024",
+      "replaces": [
+        "SI 132/2015",
+        "SI 124/2020",
+        "SI 186/2023",
+        "SI 187/2023"
+      ],
+      "summary": "Establishes Consignment Based Conformity Assessment (CBCA) programme. All goods in Fourth Schedule with FOB > USD 1,000 require Certificate of Conformity from appointed Conformity Assessment Body before customs clearance.",
+      "key_rules": [
+        "First Schedule goods (motor vehicles HS 87.01-87.07, 87.16) \u2013 CBCA required REGARDLESS of value. No FOB threshold.",
+        "Fourth Schedule goods \u2013 CBCA required if FOB > USD 1,000 per consignment.",
+        "Assessment conducted in country of origin by appointed Conformity Assessment Body.",
+        "Goods arriving without CoC: compulsory destination assessment + 12% CIF penalty to Treasury.",
+        "Non-conforming goods must be re-exported or destroyed at importer's cost.",
+        "UN organisations and Diplomatic Missions EXEMPT (Vienna Convention).",
+        "Assessment fees: Motor vehicles USD 140-200 per unit; General goods 0.25-0.50% FOB (min USD 240, max USD 2,675).",
+        "Destination assessment fees same as above plus 12% CIF penalty."
+      ],
+      "cbca_always_headings": [
+        "87.01",
+        "87.02",
+        "87.03",
+        "87.04",
+        "87.05",
+        "87.06",
+        "87.07",
+        "87.16"
+      ],
+      "cbca_threshold_headings_sample": [
+        "09.02",
+        "15.07-15.15",
+        "17.04",
+        "18.06",
+        "19.02",
+        "19.04",
+        "19.05",
+        "20.05",
+        "20.08",
+        "20.09",
+        "22.01-22.09",
+        "25.23",
+        "27.10",
+        "27.11",
+        "31.01-31.05",
+        "33.03-33.07",
+        "34.01-34.03",
+        "34.06",
+        "38.08",
+        "39.17-39.26",
+        "40.09-40.17",
+        "56.01-56.09",
+        "57.01-57.05",
+        "61.01-61.17",
+        "62.01-62.17",
+        "63.01-63.07",
+        "64.01-65.05",
+        "68.13",
+        "69.07-69.10",
+        "70.13",
+        "72.14-72.15",
+        "73.03-73.24",
+        "74.10-74.19",
+        "75.07",
+        "76.08-76.15",
+        "82.02-82.10",
+        "83.01-83.07",
+        "84.15-85.49",
+        "87.01-87.16",
+        "90.04",
+        "90.20",
+        "94.05",
+        "95.03-95.05",
+        "96.09",
+        "96.19"
+      ]
+    },
+    {
+      "si": "SI 54/2024",
+      "title": "Control of Goods (Import & Export) (Commerce) (Amendment) Regulations, 2024 (No. 10)",
+      "effective": "29 March 2024",
+      "replaces": "Section 3(1) of SI 89/2021",
+      "summary": "Prohibits import of second-hand motor vehicles aged 10 years and above from date of manufacture. Consolidated and expanded by SI 59/2026.",
+      "key_rules": [
+        "Second-hand vehicles aged \u2265 10 years from date of manufacture: PROHIBITED for import.",
+        "Prohibited vehicles must be re-exported by owner at own expense."
+      ]
+    },
+    {
+      "si": "SI 59/2026",
+      "title": "Control of Goods (Import & Export) (Commerce) (Amendment) Regulations, 2026 (No. 15)",
+      "effective": "25 March 2026",
+      "replaces": [
+        "SI 122/2017",
+        "SI 237A/2018",
+        "SI 60/2020",
+        "SI 90/2020",
+        "SI 89/2021",
+        "SI 94/2022",
+        "SI 103/2022",
+        "SI 185/2022",
+        "SI 101/2023",
+        "SI 6/2024",
+        "SI 54/2024",
+        "SI 68/2024",
+        "SI 111/2024",
+        "SI 172/2024",
+        "SI 45/2025",
+        "SI 46/2025"
+      ],
+      "summary": "Comprehensive consolidation of all import/export licensing requirements. Introduces licence fees, rejection grounds, second-hand clothing prohibition, expanded goods lists.",
+      "key_rules": [
+        "Import licence application fee: USD 100 non-refundable (or ZiG equivalent at interbank rate). SI 59/2026 s5B.",
+        "Export licence application fee: USD 50 non-refundable (or ZiG equivalent). SI 59/2026 s5B.",
+        "Grounds for rejection: goods not meeting quality/safety standards; prejudicial to economic interests; applicant previously contravened regulations. SI 59/2026 s5A.",
+        "Second-hand vehicles \u2265 10 years PROHIBITED. If not re-exported within 60 days \u2192 forfeited to State. Exceptions: deceased estates, immigrants (C&E Act s9NO(1)/s105(1)), diplomats returning from postings, vintage vehicles. SI 59/2026 s7A.",
+        "Second-hand CLOTHING: PROHIBITED except with permit for charitable purposes only. SI 59/2026 s7B(1).",
+        "Second-hand UNDERGARMENTS: STRICTLY PROHIBITED under ALL circumstances. SI 59/2026 s7B(2).",
+        "Offences: fine up to level 12 OR imprisonment up to 1 year, or both.",
+        "Individuals may import limited personal use quantities monthly without licence (cooking oil 4L, sugar 4kg, cereals 2kg, jam 2kg, peanut butter 2kg, margarine 2kg, laundry soap 1 box/24 bars, washing powder 4kg, 1 blanket, 4 pieces cotton woven fabric, body creams 1 case/6). SI 59/2026 Third Schedule Part II."
+      ],
+      "import_licence_goods_schedule": {
+        "note": "See First Schedule. Key categories requiring import licence:",
+        "categories": [
+          "Live poultry HS 01.05",
+          "Poultry meat HS 02.07",
+          "Swine meat HS 02.07",
+          "Milk/cream retail packed HS 04.01, 0402.91, 0402.99, 0403.90",
+          "Onions HS 0703.10",
+          "Potatoes HS 0710.10",
+          "Noodles HS 1902",
+          "Cement clinkers HS 2523.10",
+          "White cement HS 2523.21",
+          "Other Portland cement HS 2523.29",
+          "Petroleum fuels (in containers, non-NOCZIM) HS 2710.12, 2710.19",
+          "Aluminium sulphate HS 2833.22",
+          "Radioactive elements HS 28.44, 28.45",
+          "Specific pharma (antacids, aspirin, ibuprofen, paracetamol, metformin, metronidazole, cotrimoxazole, erythromycin, amoxicillin, cloxacillin, IV fluids) HS 3004.xx",
+          "Plastic tubes/pipes HS 3917.21, 3917.23",
+          "Plastic bags & polymers HS 3920, 3921, 3923",
+          "Conveyor belts HS 4010.11, 4010.12, 4010.19",
+          "Retreaded tyres HS 40.12",
+          "Wooden doors HS 4418.21, 4418.29",
+          "School uniforms including socks",
+          "Furniture and steel kitchen units",
+          "Paper/stationery/books (HS 48.10-49.xx)",
+          "Long pile fabrics HS 60.01",
+          "Blankets HS 63.01",
+          "Sacks/bags HS 6305.32, 6305.33, 6305.90",
+          "Footwear HS 64.01-64.06",
+          "Steel bars/rods/sections HS 7211.19, 7214.20/30/99, 7216.10/21/22",
+          "Steel structures HS 7308.10/20/30/90",
+          "Steel containers/wire HS 7310, 7313, 7314, 7316, 7317, 7318",
+          "Aerosol cans HS 7612.90",
+          "Crown corks HS 8309.10",
+          "Nuclear reactors HS 8401.10/30/40",
+          "Metal insulated panels HS 8418.99.10",
+          "Agricultural equipment HS 8432.xx",
+          "Furniture HS 9401.61/69, 9403.10, 94.03 (excl 9403.40)",
+          "Specific pharma preparations HS 3004.90.32, 2918.22 etc."
+        ]
+      },
+      "export_licence_goods": [
+        "Fertiliser (all types)",
+        "Raw and refined sugar",
+        "Second-hand industrial equipment"
+      ],
+      "personal_exemptions_monthly": {
+        "cooking_oil": "4 litres",
+        "sugar": "4 kg",
+        "cereals": "2 kg",
+        "jam": "2 kg",
+        "peanut_butter": "2 kg",
+        "margarine": "2 kg",
+        "laundry_bar_soap": "1 box of 24 bars",
+        "washing_powder": "4 kg",
+        "blanket": "1 piece",
+        "cotton_woven_fabric": "4 pieces",
+        "body_creams": "1 case of 6"
+      }
+    },
+    {
+      "si": "SI 60/2024",
+      "title": "Presidential Powers (Temporary Measures) (Zimbabwe Gold Notes and Coins) Regulations, 2024",
+      "effective": "5 April 2024",
+      "summary": "Establishes Zimbabwe Gold (ZiG) as the official domestic currency backed by gold and foreign exchange reserves. ZiG is legal tender alongside USD.",
+      "key_rules": [
+        "ZiG is legal tender in all transactions alongside USD and other prescribed currencies (Reserve Bank Act s44A).",
+        "Initial ZiG value: equivalent to 1 milligram of 99% gold at LBMA spot price. Thereafter determined by inflation differential and gold/mineral reserve movements.",
+        "All Zimbabwe dollar balances converted to ZiG on effective date at formula A/B.",
+        "ZiG notes: 1, 2, 5, 10, 20, 50, 100, 200 ZiG denominations. All cotton paper, 155mm x 65mm.",
+        "For customs: all duties payable in ZiG at prevailing RBZ interbank rate, or in USD.",
+        "Customs duty formula unchanged; ZiG conversion applies at point of payment."
+      ],
+      "denominations": [
+        "1 ZiG (Blue)",
+        "2 ZiG (Green)",
+        "5 ZiG (Red)",
+        "10 ZiG (Dark Blue)",
+        "20 ZiG (Peach)",
+        "50 ZiG (Orange)",
+        "100 ZiG (Olive Green)",
+        "200 ZiG (Purple)"
+      ]
+    },
+    {
+      "si": "SI 178/2024",
+      "title": "Customs and Excise (Suspension) (Amendment) Regulations, 2024 (No. 275)",
+      "effective": "8 November 2024",
+      "duration": "12 months from publication",
+      "summary": "Wholly suspends customs duty on imported fertilisers for approved importers for the 2024/2025 season.",
+      "key_rules": [
+        "Duty 100% suspended on: Urea (3102.10.00, 3102.80.00) up to 100,000 metric tonnes; Ammonium nitrate (3102.30.00) up to 150,000 metric tonnes.",
+        "Only available to importers approved AND licensed by Ministry of Agriculture (in consultation with Ministry of Industry & Commerce and Fertiliser Manufacturing Industry).",
+        "Commissioner must verify compliance with Revenue Authority Act s34C (tax clearance).",
+        "Importers selling suspended-duty fertiliser at prices equal to or higher than duty-paid fertiliser \u2192 liable to pay suspended duty + applicable penalties.",
+        "Approved importers may also exhaust ring-fenced allocations from SI 166/2023."
+      ],
+      "applicable_hs_codes": [
+        "3102.10.00 (Urea)",
+        "3102.30.00 (Ammonium nitrate)",
+        "3102.80.00 (Urea-ammonium nitrate mixtures)"
+      ]
+    },
+    {
+      "si": "SI 5/2023",
+      "title": "Base Minerals Export Control (Unb\u00e9n\u00e9ficiated Base Mineral Ores) Order, 2023",
+      "effective": "Immediate on publication (January 2023)",
+      "replaces": "Base Minerals Export Control (Iron-Bearing Ores) Order, 2022",
+      "summary": "Prohibits export of any unb\u00e9n\u00e9ficiated base mineral ore from Zimbabwe without written ministerial permit.",
+      "key_rules": [
+        "No unb\u00e9n\u00e9ficiated base mineral ore may be exported without written permit from Minister of Mines and Mining Development.",
+        "Permit granted only if: goods cannot be processed in Zimbabwe; or sample for assay/testing (limited quantity).",
+        "Base minerals = coal + all other minerals/substances including coke, slimes, concentrates, slags, tailings (excludes precious metals/stones/mineral oils/gas).",
+        "Unb\u00e9n\u00e9ficiated = any ore that has NOT undergone processing within Zimbabwe to any extent.",
+        "Penalty: fine up to value of the base minerals involved + imprisonment."
+      ],
+      "covered_headings": "HS chapters 26 (metallic ores), 27 (coal, coke), and relevant metals chapters (72, 74, 75, 76, 78, 79, 80)"
+    },
+    {
+      "si": "SI 157/2024",
+      "title": "Control of Goods (OGIL) (Amendment) Notice, 2024 (No. 16)",
+      "effective": "20 September 2024",
+      "summary": "Removes certain goods from import/export licence requirements, adding them to Open General Import Licence (OGIL). Also adjusts export licence fees.",
+      "key_rules": [
+        "DEREGULATED (no longer need import licence): Cables (HS 76.14, 85.44); Binders/twine/ropes/cables (HS 56.07, 56.08, 56.09); Luggage/trunks/handbags (HS 42.02); Wiring harness (HS 85.44); Woven fabric (HS 5208-5211); Cooler boxes (HS 9403700).",
+        "DEREGULATED from export licence: Gypsum (HS 2520.10); Bin liners (HS 39.20, 39.21).",
+        "Export licence fee: USD 50 payable in local currency at prevailing rate."
+      ]
+    },
+    {
+      "si": "SI 50A/2025",
+      "title": "Customs and Excise (Surtax Tariff) (Amendment) Notice, 2025 (No. 6)",
+      "effective": "15 May 2025",
+      "summary": "Introduces Second Schedule to Surtax Tariff with 30% surtax on specified imports. Removes yoghurt from First Schedule surtax.",
+      "key_rules": [
+        "30% surtax ad valorem charged IN ADDITION to normal customs duty on Second Schedule goods.",
+        "Yoghurt (0403.20.00) removed from First Schedule surtax (no longer surtaxed).",
+        "30% SURTAX applies to: Milk 0401.10/20; Yoghurt 0403.20; Cane sugar 1701.13/14/99; Beer 2203.00; White cement 2523.21; Other cement 2523.29; Ceramic tiles 6907.21/22/23; Flat-rolled steel 7211.19; Steel bars/rods 7214.20/30/99; Steel angle sections 7216.10/21/22."
+      ],
+      "surtax_second_schedule": {
+        "milk": [
+          "0401.10.00",
+          "0401.20.00"
+        ],
+        "yoghurt": [
+          "0403.20.00"
+        ],
+        "cane_sugar": [
+          "1701.13.00",
+          "1701.14.00",
+          "1701.99.00"
+        ],
+        "beer": [
+          "2203.00.19"
+        ],
+        "cement_white": [
+          "2523.21.00"
+        ],
+        "cement_other": [
+          "2523.29.00"
+        ],
+        "ceramic_tiles": [
+          "6907.21.00",
+          "6907.22.00",
+          "6907.23.00"
+        ],
+        "steel_flat_rolled": [
+          "7211.19.00"
+        ],
+        "steel_bars": [
+          "7214.20.00",
+          "7214.30.00",
+          "7214.99.00"
+        ],
+        "steel_sections": [
+          "7216.10.00",
+          "7216.21.00",
+          "7216.22.00"
+        ]
+      }
+    },
+    {
+      "si": "SI 7/2025",
+      "title": "Customs and Excise (Designated Deemed Smuggled Goods) Regulations, 2025",
+      "effective": "28 November 2024 (gazette 27 January 2025)",
+      "summary": "Designates commercial goods where failure to produce customs clearance documentary evidence results in deemed smuggling liability.",
+      "key_rules": [
+        "Manufacturers, wholesalers, retailers AND individuals in possession of designated goods must produce authentic documentary evidence that duty was properly paid/cleared.",
+        "Failure to produce evidence = DEEMED SMUGGLED \u2192 liable for duty + applicable penalties.",
+        "NOTE: Customers buying from local retailers are EXEMPT from producing proof (responsibility rests with importer/manufacturer/wholesaler/retailer).",
+        "Does NOT apply to goods purchased locally from local manufacturers."
+      ],
+      "designated_goods": [
+        "Alcoholic beverages",
+        "Non-alcoholic beverages",
+        "Cement",
+        "Clothing",
+        "Footwear",
+        "Dairy products",
+        "Diapers",
+        "Electrical appliances cables and accessories",
+        "Ploughs and parts thereof",
+        "Processed meat",
+        "Rice",
+        "Pasta",
+        "Sugar",
+        "Tyres",
+        "Motor spares",
+        "Washing powder and detergents",
+        "Biscuits",
+        "Sweets",
+        "Laundry and bath soaps"
+      ]
+    },
+    {
+      "si": "SI 35/2025",
+      "title": "Customs and Excise (General) (Amendment) Regulations, 2025 (No. 124)",
+      "effective": "15 April 2025",
+      "replaces": "Section 144X (COVID-19 rebate)",
+      "summary": "Grants rebate of customs duty on equipment and machinery for setting up solar-powered EV charging stations, for ZERA-approved operators.",
+      "key_rules": [
+        "Duty rebate available to ZERA-approved operators importing equipment solely for construction/erection of solar-powered EV charging stations.",
+        "Commissioner must verify compliance with Revenue Authority Act s34C.",
+        "Equipment cannot be transferred between operators/sites without Commissioner's written consent.",
+        "Equipment cannot be sold/disposed without Commissioner's written permission + payment of original duty at time of entry.",
+        "Importer must declare equipment will be used solely for the approved charging station.",
+        "Rebate covers: solar panels, inverters, EV chargers, battery storage systems, charging control units, mounting structures, electrical wiring components, monitoring systems, grounding equipment."
+      ],
+      "eligible_equipment": [
+        "Solar panels",
+        "Inverter",
+        "EV chargers",
+        "Battery storage system",
+        "Charging control units",
+        "Mounting structures",
+        "Electrical wiring components",
+        "Monitoring system",
+        "Grounding Equipment"
+      ]
+    }
+  ],
+  "duty_calculation_rules": {
+    "formula": "Customs Duty = CIF Value \u00d7 Duty Rate",
+    "vat_formula": "VAT = (CIF + Customs Duty) \u00d7 14.5%",
+    "cif_formula": "CIF = FOB + Freight + Insurance",
+    "surtax_formula": "Surtax Duty = CIF Value \u00d7 Surtax Rate (30%); Surtax goods: total duty = customs duty + surtax + VAT on (CIF + customs duty + surtax)",
+    "currency": "Duties calculated in USD. Payable in USD or ZiG at prevailing RBZ interbank rate.",
+    "vat_rate": 0.145,
+    "notes": [
+      "CIF must be allocated proportionally across line items by FOB value when freight/insurance covers multiple goods.",
+      "For vehicles: always check second-hand age (10yr ban) and CBCA requirement regardless of value.",
+      "For pharmaceuticals: check if specific pharma on SI 59/2026 First Schedule (requires import licence from Ministry of Industry & Commerce, distinct from MCAZ requirement).",
+      "Fertiliser: check if duty suspension applies (approved importer with Agriculture Ministry licence)."
+    ]
+  },
+  "quick_compliance_matrix": {
+    "vehicles_new": {
+      "cbca": "ALWAYS required (SI 35/2024 First Schedule)",
+      "import_licence": "No (unless second-hand)",
+      "notes": "CBCA fee USD 140/unit (rest of world), USD 200/unit (UK)"
+    },
+    "vehicles_secondhand": {
+      "cbca": "ALWAYS required",
+      "import_licence": "PROHIBITED if \u226510 years old (SI 59/2026 s7A)",
+      "notes": "Exceptions for deceased estates, immigrants, diplomats, vintage vehicles"
+    },
+    "clothing_new": {
+      "cbca": "Required if FOB > USD 1,000 (SI 35/2024 Fourth Schedule headings 61-62)",
+      "import_licence": "Required for school uniforms. General clothing per SI 59/2026 First Schedule.",
+      "deemed_smuggled": "Yes \u2013 must carry clearance docs (SI 7/2025)"
+    },
+    "clothing_secondhand": {
+      "import_licence": "PROHIBITED except charitable permit. Undergarments: ABSOLUTELY PROHIBITED (SI 59/2026 s7B)"
+    },
+    "cement": {
+      "cbca": "Required if FOB > USD 1,000 (HS 25.23)",
+      "import_licence": "Required (HS 2523.10/21/29, SI 59/2026)",
+      "surtax": "30% surtax (SI 50A/2025)",
+      "deemed_smuggled": "Yes (SI 7/2025)"
+    },
+    "pharmaceuticals_broad": {
+      "import_licence": "Most HS 3004 items require import licence from Ministry of Industry & Commerce per SI 59/2026",
+      "authority": "Ministry of Industry & Commerce (import licence) + MCAZ (medicine registration \u2013 separate requirement)"
+    },
+    "cooking_oil": {
+      "cbca": "Required if FOB > USD 1,000 (HS 15xx)",
+      "import_licence": "No (on OGIL for commercial quantities)",
+      "personal_exemption": "4 litres/month without licence for personal use"
+    },
+    "fertiliser": {
+      "cbca": "Required if FOB > USD 1,000 (HS 31xx)",
+      "import_licence": "Required",
+      "export_licence": "Required",
+      "duty_suspension": "Available for Ministry of Agriculture approved importers (SI 178/2024)"
+    },
+    "sugar": {
+      "cbca": "Required if FOB > USD 1,000",
+      "import_licence": "Required",
+      "export_licence": "Required",
+      "surtax": "30% surtax on cane sugar HS 1701.13/14/99 (SI 50A/2025)"
+    },
+    "base_minerals_ores": {
+      "export": "PROHIBITED without written ministerial permit (SI 5/2023)",
+      "notes": "Applies to all unbeneficiated ores. Only exceptions: genuine technical inability to process locally, or assay samples"
+    }
+  }
+}
