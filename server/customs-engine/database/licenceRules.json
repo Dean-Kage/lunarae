@@ -1,0 +1,209 @@
+{
+  "_meta": {
+    "si_reference": "SI 122/2017",
+    "description": "Import and export licence requirements by HS chapter, heading or specific code. Authorities listed are those responsible for issuing the relevant permits."
+  },
+  "authorities": {
+    "MCAZ": {
+      "full_name": "Medicines Control Authority of Zimbabwe",
+      "contact": "+263 4 736758",
+      "website": "www.mcaz.co.zw",
+      "permit_types": ["MCAZ Import Permit", "Medical Device Import Permit", "Pharmaceutical Export Permit"]
+    },
+    "MOA": {
+      "full_name": "Ministry of Lands, Agriculture, Fisheries, Water and Rural Development",
+      "permit_types": ["Phytosanitary Import Permit", "Veterinary Import Permit", "Seed Import Permit", "Fertiliser Import Permit"]
+    },
+    "GMB": {
+      "full_name": "Grain Marketing Board",
+      "contact": "+263 4 753401",
+      "permit_types": ["GMB Import Permit", "GMB Export Permit"]
+    },
+    "MIC": {
+      "full_name": "Ministry of Industry and Commerce",
+      "permit_types": ["Import Permit", "Export Permit", "Scrap Metal Export Permit"]
+    },
+    "MEPD": {
+      "full_name": "Ministry of Energy and Power Development",
+      "permit_types": ["Petroleum Import Licence", "Energy Technology Import Permit"]
+    },
+    "MMCZ": {
+      "full_name": "Minerals Marketing Corporation of Zimbabwe",
+      "contact": "+263 4 753451",
+      "website": "www.mmcz.co.zw",
+      "permit_types": ["MMCZ Export Permit", "Strategic Mineral Export Permit"]
+    },
+    "RBZ": {
+      "full_name": "Reserve Bank of Zimbabwe",
+      "permit_types": ["Foreign Currency Declaration", "Financial Instrument Permit"]
+    },
+    "EMA": {
+      "full_name": "Environmental Management Agency",
+      "contact": "+263 4 305553",
+      "website": "www.ema.co.zw",
+      "permit_types": ["Controlled Chemical Import Permit", "Hazardous Waste Permit", "ODS Import Permit"]
+    },
+    "ZRP": {
+      "full_name": "Zimbabwe Republic Police",
+      "permit_types": ["Firearms Import Permit", "Explosives Import/Export Licence", "Ammunition Permit"]
+    },
+    "MOD": {
+      "full_name": "Ministry of Defence / Zimbabwe National Army",
+      "permit_types": ["Military Equipment Import Permit"]
+    },
+    "NMMZ": {
+      "full_name": "National Museums and Monuments of Zimbabwe",
+      "permit_types": ["Cultural Heritage Export Permit", "Archaeological Artefact Permit"]
+    },
+    "ZIMRA": {
+      "full_name": "Zimbabwe Revenue Authority",
+      "contact": "+263 4 758891",
+      "website": "www.zimra.co.zw",
+      "permit_types": ["General Customs Declaration", "Rebate Entry", "Drawback Entry"]
+    }
+  },
+  "import_licence_chapters": {
+    "2": {
+      "description": "Meat and edible meat offal",
+      "authority": "MOA",
+      "licence_type": "Veterinary Import Permit",
+      "notes": "All meat products require veterinary clearance; foot-and-mouth disease controls"
+    },
+    "3": {
+      "description": "Fish and crustaceans",
+      "authority": "MOA",
+      "licence_type": "Veterinary Import Permit"
+    },
+    "6": {
+      "description": "Live trees and other plants",
+      "authority": "MOA",
+      "licence_type": "Phytosanitary Import Permit",
+      "notes": "CITES permit may also be required for protected species"
+    },
+    "7": {
+      "description": "Edible vegetables",
+      "authority": "MOA",
+      "licence_type": "Phytosanitary Import Permit"
+    },
+    "8": {
+      "description": "Edible fruit and nuts",
+      "authority": "MOA",
+      "licence_type": "Phytosanitary Import Permit"
+    },
+    "10": {
+      "description": "Cereals",
+      "authority": "GMB",
+      "licence_type": "GMB Import Permit",
+      "notes": "Cereals (wheat, maize, grain sorghum) require GMB permit"
+    },
+    "12": {
+      "description": "Oil seeds; seeds for sowing",
+      "authority": "MOA",
+      "licence_type": "Seed Import Permit",
+      "notes": "Only seeds for sowing require permit; non-seed use varies"
+    },
+    "27": {
+      "description": "Petroleum and petroleum products",
+      "authority": "MEPD",
+      "licence_type": "Petroleum Import Licence",
+      "notes": "All petroleum products 2709-2715 require MEPD licence"
+    },
+    "29": {
+      "description": "Organic chemicals (certain)",
+      "authority": "EMA",
+      "licence_type": "Controlled Chemical Import Permit",
+      "notes": "Applies to listed hazardous organic chemicals; not all chapter 29 codes"
+    },
+    "30": {
+      "description": "Pharmaceutical products",
+      "authority": "MCAZ",
+      "licence_type": "MCAZ Import Permit",
+      "notes": "All medicines for human or veterinary use — MCAZ registration and import permit"
+    },
+    "31": {
+      "description": "Fertilisers",
+      "authority": "MOA",
+      "licence_type": "Fertiliser Import Permit",
+      "notes": "Fertiliser Inspectorate registration of product required before import permit issued"
+    },
+    "36": {
+      "description": "Explosives, pyrotechnic products",
+      "authority": "ZRP",
+      "licence_type": "Explosives Import Licence",
+      "notes": "Mine explosives additionally require Ministry of Mines Inspectorate approval"
+    },
+    "38": {
+      "description": "Miscellaneous chemical products (certain)",
+      "authority": "EMA",
+      "licence_type": "Controlled Chemical Import Permit",
+      "notes": "Pesticides, herbicides, controlled POPs listed in SI 59/2026"
+    },
+    "87": {
+      "description": "Motor vehicles (second-hand — age restrictions apply)",
+      "authority": "ZIMRA",
+      "licence_type": "Vehicle Import Clearance",
+      "notes": "Must meet age requirement per SI 157/2024; RHD only"
+    },
+    "90": {
+      "description": "Medical devices and instruments",
+      "authority": "MCAZ",
+      "licence_type": "Medical Device Import Permit",
+      "notes": "Class II and III medical devices require pre-market approval"
+    },
+    "93": {
+      "description": "Arms, ammunition, and military equipment",
+      "authority": "ZRP / MOD",
+      "licence_type": "Firearms Import Permit / Military Import Permit",
+      "notes": "Civilian: ZRP permit; Military/govt: MOD permit"
+    }
+  },
+  "export_licence_chapters": {
+    "26": {
+      "description": "Ores, slag and ash",
+      "authority": "MMCZ",
+      "licence_type": "MMCZ Export Permit",
+      "notes": "All mineral ores require MMCZ export permit; value addition policy encourages processing"
+    },
+    "28": {
+      "description": "Inorganic chemicals — strategic minerals (lithium compounds etc.)",
+      "authority": "MMCZ",
+      "licence_type": "Strategic Mineral Export Permit"
+    },
+    "71": {
+      "description": "Precious metals and stones",
+      "authority": "MMCZ",
+      "licence_type": "MMCZ Export Permit",
+      "notes": "Gold: must be sold through RBZ/Fidelity Printers; diamonds: KP certificate required"
+    },
+    "72": {
+      "description": "Iron and steel (scrap)",
+      "authority": "MIC",
+      "licence_type": "Scrap Metal Export Permit",
+      "notes": "Policy restricts raw scrap export to protect local steel industry"
+    },
+    "74": {
+      "description": "Copper and copper scrap",
+      "authority": "MMCZ / MIC",
+      "licence_type": "MMCZ Export Permit",
+      "notes": "Raw copper ore — MMCZ; copper scrap — MIC restriction"
+    },
+    "93": {
+      "description": "Arms and ammunition",
+      "authority": "MOD / ZRP",
+      "licence_type": "Military Export Permit",
+      "notes": "Arms exports regulated under Zimbabwe's defence policy"
+    },
+    "97": {
+      "description": "Antiques and cultural artefacts",
+      "authority": "NMMZ",
+      "licence_type": "Cultural Heritage Export Permit",
+      "notes": "Artefacts > 100 years require NMMZ approval; national heritage cannot be exported"
+    }
+  },
+  "specific_hs_codes": {
+    "10059000": { "import_required": true, "export_required": true, "import_authority": "GMB", "export_authority": "GMB" },
+    "71081200": { "import_required": false, "export_required": true, "export_authority": "MMCZ", "notes": "Gold sales through RBZ/Fidelity" },
+    "71023100": { "import_required": false, "export_required": true, "export_authority": "MMCZ", "notes": "Diamonds require Kimberley Process (KP) certificate" },
+    "28258000": { "import_required": false, "export_required": true, "export_authority": "MMCZ" }
+  }
+}

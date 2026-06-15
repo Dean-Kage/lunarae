@@ -5,15 +5,32 @@
  * Port: 4000
  */
 
-const express  = require('express')
-const cors     = require('cors')
-const axios    = require('axios')
-const multer   = require('multer')
-const fs       = require('fs')
-const path     = require('path')
-const pdfParse = require('pdf-parse')
-const mammoth  = require('mammoth')
+// dotenv MUST load before any other require that reads process.env
 require('dotenv').config({ path: __dirname + '/../.env' })
+
+const express   = require('express')
+const cors      = require('cors')
+const axios     = require('axios')
+const multer    = require('multer')
+const fs        = require('fs')
+const path      = require('path')
+const pdfParse  = require('pdf-parse')
+const mammoth   = require('mammoth')
+const authRoutes    = require('./routes/auth')
+const companyRoutes = require('./routes/company')
+const inviteRoutes  = require('./routes/invite')
+const boesRoutes    = require('./routes/boes')
+const adminRoutes        = require('./routes/admin')
+const subscriptionRoutes = require('./routes/subscription')
+const paymentRoutes      = require('./routes/payments')
+const billingRoutes      = require('./payments/billingRoutes')
+const customsRoutes      = require('./customs-engine/routes/customs')
+const reviewRoutes       = require('./customs/review/reviewRoutes')
+const evaluateRoutes     = require('./customs/evaluateRoutes')
+const shadowRoutes       = require('./customs/shadow/shadowRoutes')
+const onboardingRoutes   = require('./onboarding/onboardingRoutes')
+const auditRoutes        = require('./audit/auditRoutes')
+const reportingRoutes    = require('./reporting/reportingRoutes')
 
 const app  = express()
 const PORT = process.env.PORT || 4000
@@ -21,13 +38,48 @@ const PORT = process.env.PORT || 4000
 // ── Multer – temp upload folder ───────────────────────────────────────────
 const upload = multer({ dest: path.join(__dirname, '../uploads/') })
 
-// ── Middleware ────────────────────────────────────────────────────────────
-app.use(cors({ origin: 'http://localhost:3000' }))
+// ── CORS ─────────────────────────────────────────────────────────────────
+// CORS_ORIGINS in .env (comma-separated) controls allowed origins.
+// Production must set: CORS_ORIGINS=https://lunaraeai.inka.co.zw
+const CORS_ORIGINS = process.env.CORS_ORIGINS
+  ? process.env.CORS_ORIGINS.split(',').map(s => s.trim())
+  : ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:4173']
+
+app.use(cors({
+  origin: CORS_ORIGINS,
+  credentials: true,
+}))
 app.use(express.json({ limit: '20mb' }))
 
 app.use((req, res, next) => {
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`)
   next()
+})
+
+// ── Auth routes ───────────────────────────────────────────────────────────
+app.use('/api/auth', authRoutes)
+
+// ── Company management routes ─────────────────────────────────────────────
+app.use('/api/company', companyRoutes)
+app.use('/api/invite',  inviteRoutes)
+app.use('/api/boes',    boesRoutes)
+app.use('/api/admin',        adminRoutes)
+app.use('/api/subscription', subscriptionRoutes)
+app.use('/api/payments',    billingRoutes)   // Stage 5B: /create, /verify, /paynow/*
+app.use('/api/payments',    paymentRoutes)   // existing: /invoice, /initiate, /status/:id, /webhook, /history
+app.use('/api/customs/evaluate', evaluateRoutes)
+app.use('/api/customs/review',  reviewRoutes)
+app.use('/api/customs/shadow',  shadowRoutes)
+app.use('/api/customs',         customsRoutes)
+app.use('/api/onboarding',      onboardingRoutes)
+app.use('/api/audit',           auditRoutes)
+app.use('/api/reporting',       reportingRoutes)
+
+
+app.get('/api/onboarding/test', (req, res) => {
+  res.json({
+    success: true
+  })
 })
 
 // ── Health check ──────────────────────────────────────────────────────────
@@ -130,7 +182,7 @@ app.post('/api/claude', async (req, res) => {
         headers: {
           'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
           'Content-Type':  'application/json',
-          'HTTP-Referer':  'http://localhost:3000',
+          'HTTP-Referer':  process.env.SITE_URL || 'https://lunaraeai.inka.co.zw',
           'X-Title':       'Lunarae'
         },
         timeout: 120000
@@ -151,10 +203,25 @@ app.post('/api/claude', async (req, res) => {
   }
 })
 
-// ── Catch-all ─────────────────────────────────────────────────────────────
-app.use('*', (req, res) => {
-  res.status(404).json({ error: `Route ${req.originalUrl} not found` })
-})
+// ── Static frontend (production) ──────────────────────────────────────────
+// When NODE_ENV=production and there is no upstream Nginx handling static
+// files, Express serves the compiled Vite output from dist/.
+// If Nginx already proxies only /api/* to this server, this block is never
+// reached for real asset requests — it safely falls through.
+if (process.env.NODE_ENV === 'production') {
+  const distDir = path.join(__dirname, '../dist')
+  if (fs.existsSync(distDir)) {
+    app.use(express.static(distDir))
+    app.get('*', (_req, res) => {
+      res.sendFile(path.join(distDir, 'index.html'))
+    })
+  }
+} else {
+  // Dev: 404 JSON for unmatched routes (Vite dev server handles frontend)
+  app.use('*', (req, res) => {
+    res.status(404).json({ error: `Route ${req.originalUrl} not found` })
+  })
+}
 
 // ── Start ─────────────────────────────────────────────────────────────────
 app.listen(PORT, () => {

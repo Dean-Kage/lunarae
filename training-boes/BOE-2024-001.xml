@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ASYCUDA World SAD — BOE-ZW-2024-001 — Electronics import from South Africa -->
+<Declaration>
+  <FunctionCode>9</FunctionCode>
+  <TypeCode>IM</TypeCode>
+  <ID>BOE-ZW-2024-001</ID>
+  <IssueDateTime>
+    <DateTimeString>20240312143000+0200</DateTimeString>
+  </IssueDateTime>
+  <GoodsItemQuantity>5</GoodsItemQuantity>
+  <TotalGrossMassMeasure unitCode="KGM">1250</TotalGrossMassMeasure>
+  <DeclarationOffice>
+    <ID>ZWHAR</ID>
+    <Name>Harare International Airport</Name>
+  </DeclarationOffice>
+  <Exporter>
+    <Name>TechSource Distributors (Pty) Ltd</Name>
+    <Address>
+      <Line>14 Innovation Drive, Johannesburg</Line>
+      <CountryCode>ZA</CountryCode>
+    </Address>
+  </Exporter>
+  <Declarant>
+    <Name>Lunarae Customs Agents</Name>
+    <ID>ZWCL88201</ID>
+  </Declarant>
+  <Importer>
+    <Name>Zimbabwe Tech Distributors Ltd</Name>
+    <ID>ZW2024-IMP-001</ID>
+  </Importer>
+  <GoodsShipment>
+    <TransactionNatureCode>1</TransactionNatureCode>
+    <CountryOfDestinationCode>ZW</CountryOfDestinationCode>
+    <ExportCountry>
+      <ID>ZA</ID>
+    </ExportCountry>
+    <Consignment>
+      <ContainerCode>1</ContainerCode>
+      <GoodsLocation>
+        <Name>Harare International Airport</Name>
+        <TypeCode>A</TypeCode>
+      </GoodsLocation>
+    </Consignment>
+
+    <!-- Item 1: Mobile phones -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>1</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">12500</StatisticalValueAmount>
+      <Commodity>
+        <Description>Mobile cellular telephone handsets, touchscreen, 4G/LTE capable</Description>
+        <Classification>
+          <ID>85252010</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">250</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">230</NetNetWeightMeasure>
+          <TariffQuantity>500</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">12500</AdValoremTaxBaseAmount>
+        <RateNumeric>40</RateNumeric>
+        <PayableTaxAmount currencyID="USD">5000</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>SUX</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">12500</AdValoremTaxBaseAmount>
+        <RateNumeric>10</RateNumeric>
+        <PayableTaxAmount currencyID="USD">1250</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">18750</AdValoremTaxBaseAmount>
+        <RateNumeric>14.5</RateNumeric>
+        <PayableTaxAmount currencyID="USD">2718.75</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 2: Laptop computers -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>2</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">18000</StatisticalValueAmount>
+      <Commodity>
+        <Description>Portable automatic data processing machines, laptops, weight not exceeding 10kg</Description>
+        <Classification>
+          <ID>84713000</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">300</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">270</NetNetWeightMeasure>
+          <TariffQuantity>200</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">18000</AdValoremTaxBaseAmount>
+        <RateNumeric>25</RateNumeric>
+        <PayableTaxAmount currencyID="USD">4500</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">22500</AdValoremTaxBaseAmount>
+        <RateNumeric>14.5</RateNumeric>
+        <PayableTaxAmount currencyID="USD">3262.50</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 3: LCD monitors -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>3</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">6000</StatisticalValueAmount>
+      <Commodity>
+        <Description>Monitors, LCD flat panel display units for use with ADP machines</Description>
+        <Classification>
+          <ID>85285200</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">400</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">360</NetNetWeightMeasure>
+          <TariffQuantity>150</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">6000</AdValoremTaxBaseAmount>
+        <RateNumeric>25</RateNumeric>
+        <PayableTaxAmount currencyID="USD">1500</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">7500</AdValoremTaxBaseAmount>
+        <RateNumeric>14.5</RateNumeric>
+        <PayableTaxAmount currencyID="USD">1087.50</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 4: Networking equipment (routers/switches) -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>4</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">4500</StatisticalValueAmount>
+      <Commodity>
+        <Description>Machines for receiving, converting, transmitting data — networking routers and switches</Description>
+        <Classification>
+          <ID>85176200</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">180</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">160</NetNetWeightMeasure>
+          <TariffQuantity>90</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">4500</AdValoremTaxBaseAmount>
+        <RateNumeric>25</RateNumeric>
+        <PayableTaxAmount currencyID="USD">1125</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">5625</AdValoremTaxBaseAmount>
+        <RateNumeric>14.5</RateNumeric>
+        <PayableTaxAmount currencyID="USD">815.63</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 5: Photovoltaic solar panels -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>5</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">8000</StatisticalValueAmount>
+      <Commodity>
+        <Description>Photovoltaic cells and solar modules, for electricity generation</Description>
+        <Classification>
+          <ID>85414090</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">120</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">110</NetNetWeightMeasure>
+          <TariffQuantity>40</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">8000</AdValoremTaxBaseAmount>
+        <RateNumeric>0</RateNumeric>
+        <PayableTaxAmount currencyID="USD">0</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">8000</AdValoremTaxBaseAmount>
+        <RateNumeric>0</RateNumeric>
+        <PayableTaxAmount currencyID="USD">0</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+  </GoodsShipment>
+</Declaration>

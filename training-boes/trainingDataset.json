@@ -1,0 +1,521 @@
+{
+  "meta": {
+    "extractedAt": "2026-06-15T08:54:10.593Z",
+    "sourceFiles": [
+      {
+        "file": "BOE-2024-001.xml",
+        "itemsExtracted": 5
+      },
+      {
+        "file": "BOE-2024-002.xml",
+        "itemsExtracted": 5
+      },
+      {
+        "file": "BOE-2024-003.xml",
+        "itemsExtracted": 7
+      }
+    ],
+    "totalItems": 17,
+    "withHsCode": 17,
+    "withDescription": 17,
+    "errors": 0
+  },
+  "items": [
+    {
+      "sourceFile": "BOE-2024-001.xml",
+      "boeNumber": "BOE-ZW-2024-001",
+      "lineNumber": 1,
+      "description": "Mobile cellular telephone handsets, touchscreen, 4G/LTE capable",
+      "hsCode": "85252010",
+      "dutyRate": 40,
+      "vatRate": 14.5,
+      "surtaxRate": 10,
+      "exciseRate": null,
+      "customsValue": 12500,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 40,
+          "amount": 5000,
+          "base": 12500
+        },
+        {
+          "type": "SUX",
+          "rate": 10,
+          "amount": 1250,
+          "base": 12500
+        },
+        {
+          "type": "VAT",
+          "rate": 14.5,
+          "amount": 2718.75,
+          "base": 18750
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-001.xml",
+      "boeNumber": "BOE-ZW-2024-001",
+      "lineNumber": 2,
+      "description": "Portable automatic data processing machines, laptops, weight not exceeding 10kg",
+      "hsCode": "84713000",
+      "dutyRate": 25,
+      "vatRate": 14.5,
+      "surtaxRate": null,
+      "exciseRate": null,
+      "customsValue": 18000,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 25,
+          "amount": 4500,
+          "base": 18000
+        },
+        {
+          "type": "VAT",
+          "rate": 14.5,
+          "amount": 3262.5,
+          "base": 22500
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-001.xml",
+      "boeNumber": "BOE-ZW-2024-001",
+      "lineNumber": 3,
+      "description": "Monitors, LCD flat panel display units for use with ADP machines",
+      "hsCode": "85285200",
+      "dutyRate": 25,
+      "vatRate": 14.5,
+      "surtaxRate": null,
+      "exciseRate": null,
+      "customsValue": 6000,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 25,
+          "amount": 1500,
+          "base": 6000
+        },
+        {
+          "type": "VAT",
+          "rate": 14.5,
+          "amount": 1087.5,
+          "base": 7500
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-001.xml",
+      "boeNumber": "BOE-ZW-2024-001",
+      "lineNumber": 4,
+      "description": "Machines for receiving, converting, transmitting data — networking routers and switches",
+      "hsCode": "85176200",
+      "dutyRate": 25,
+      "vatRate": 14.5,
+      "surtaxRate": null,
+      "exciseRate": null,
+      "customsValue": 4500,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 25,
+          "amount": 1125,
+          "base": 4500
+        },
+        {
+          "type": "VAT",
+          "rate": 14.5,
+          "amount": 815.63,
+          "base": 5625
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-001.xml",
+      "boeNumber": "BOE-ZW-2024-001",
+      "lineNumber": 5,
+      "description": "Photovoltaic cells and solar modules, for electricity generation",
+      "hsCode": "85414090",
+      "dutyRate": 0,
+      "vatRate": 0,
+      "surtaxRate": null,
+      "exciseRate": null,
+      "customsValue": 8000,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 0,
+          "amount": 0,
+          "base": 8000
+        },
+        {
+          "type": "VAT",
+          "rate": 0,
+          "amount": 0,
+          "base": 8000
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-002.xml",
+      "boeNumber": "BOE-ZW-2024-002",
+      "lineNumber": 1,
+      "description": "T-shirts, singlets and other vests of cotton, knitted or crocheted, men's",
+      "hsCode": "61091000",
+      "dutyRate": 40,
+      "vatRate": 14.5,
+      "surtaxRate": 30,
+      "exciseRate": null,
+      "customsValue": 3200,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 40,
+          "amount": 1280,
+          "base": 3200
+        },
+        {
+          "type": "SUX",
+          "rate": 30,
+          "amount": 960,
+          "base": 3200
+        },
+        {
+          "type": "VAT",
+          "rate": 14.5,
+          "amount": 788.8,
+          "base": 5440
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-002.xml",
+      "boeNumber": "BOE-ZW-2024-002",
+      "lineNumber": 2,
+      "description": "Men's suits of synthetic fibres, woven, not knitted",
+      "hsCode": "62031200",
+      "dutyRate": 40,
+      "vatRate": 14.5,
+      "surtaxRate": 30,
+      "exciseRate": null,
+      "customsValue": 5600,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 40,
+          "amount": 2240,
+          "base": 5600
+        },
+        {
+          "type": "SUX",
+          "rate": 30,
+          "amount": 1680,
+          "base": 5600
+        },
+        {
+          "type": "VAT",
+          "rate": 14.5,
+          "amount": 1380.4,
+          "base": 9520
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-002.xml",
+      "boeNumber": "BOE-ZW-2024-002",
+      "lineNumber": 3,
+      "description": "Plain woven fabrics of cotton, 85% or more cotton by weight, not more than 200g/m2, unbleached",
+      "hsCode": "52081200",
+      "dutyRate": 40,
+      "vatRate": 14.5,
+      "surtaxRate": 30,
+      "exciseRate": null,
+      "customsValue": 2800,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 40,
+          "amount": 1120,
+          "base": 2800
+        },
+        {
+          "type": "SUX",
+          "rate": 30,
+          "amount": 840,
+          "base": 2800
+        },
+        {
+          "type": "VAT",
+          "rate": 14.5,
+          "amount": 690.2,
+          "base": 4760
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-002.xml",
+      "boeNumber": "BOE-ZW-2024-002",
+      "lineNumber": 4,
+      "description": "Footwear with outer soles of rubber or plastics, uppers of leather, covering ankle, other",
+      "hsCode": "64039110",
+      "dutyRate": 40,
+      "vatRate": 14.5,
+      "surtaxRate": 20,
+      "exciseRate": null,
+      "customsValue": 4100,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 40,
+          "amount": 1640,
+          "base": 4100
+        },
+        {
+          "type": "SUX",
+          "rate": 20,
+          "amount": 820,
+          "base": 4100
+        },
+        {
+          "type": "VAT",
+          "rate": 14.5,
+          "amount": 951.2,
+          "base": 6560
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-002.xml",
+      "boeNumber": "BOE-ZW-2024-002",
+      "lineNumber": 5,
+      "description": "Used or second-hand clothing of other textile materials, sorted and baled",
+      "hsCode": "63092000",
+      "dutyRate": 40,
+      "vatRate": 14.5,
+      "surtaxRate": 30,
+      "exciseRate": null,
+      "customsValue": 950,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 40,
+          "amount": 380,
+          "base": 950
+        },
+        {
+          "type": "SUX",
+          "rate": 30,
+          "amount": 285,
+          "base": 950
+        },
+        {
+          "type": "VAT",
+          "rate": 14.5,
+          "amount": 234.18,
+          "base": 1615
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 1,
+      "description": "Maize (corn), other than seed maize, for human consumption",
+      "hsCode": "10059000",
+      "dutyRate": 5,
+      "vatRate": 0,
+      "surtaxRate": null,
+      "exciseRate": null,
+      "customsValue": 15000,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 5,
+          "amount": 750,
+          "base": 15000
+        },
+        {
+          "type": "VAT",
+          "rate": 0,
+          "amount": 0,
+          "base": 15750
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 2,
+      "description": "Diesel fuel (gas oil), automotive, sulphur content not exceeding 50 ppm",
+      "hsCode": "27101941",
+      "dutyRate": 10,
+      "vatRate": 14.5,
+      "surtaxRate": null,
+      "exciseRate": 30,
+      "customsValue": 25000,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 10,
+          "amount": 2500,
+          "base": 25000
+        },
+        {
+          "type": "EXC",
+          "rate": 30,
+          "amount": 7500,
+          "base": 25000
+        },
+        {
+          "type": "VAT",
+          "rate": 14.5,
+          "amount": 5075,
+          "base": 35000
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 3,
+      "description": "Urea, whether or not in aqueous solution, for agricultural use as fertiliser",
+      "hsCode": "31021000",
+      "dutyRate": 0,
+      "vatRate": 0,
+      "surtaxRate": null,
+      "exciseRate": null,
+      "customsValue": 8500,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 0,
+          "amount": 0,
+          "base": 8500
+        },
+        {
+          "type": "VAT",
+          "rate": 0,
+          "amount": 0,
+          "base": 8500
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 4,
+      "description": "Frozen whole chickens, not cut up, of domestic fowl",
+      "hsCode": "20712000",
+      "dutyRate": 40,
+      "vatRate": 0,
+      "surtaxRate": 20,
+      "exciseRate": null,
+      "customsValue": 3200,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 40,
+          "amount": 1280,
+          "base": 3200
+        },
+        {
+          "type": "SUX",
+          "rate": 20,
+          "amount": 640,
+          "base": 3200
+        },
+        {
+          "type": "VAT",
+          "rate": 0,
+          "amount": 0,
+          "base": 5120
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 5,
+      "description": "Passenger motor vehicles, spark-ignition internal combustion engine, cylinder capacity 1500cc to 3000cc, other",
+      "hsCode": "87032319",
+      "dutyRate": 40,
+      "vatRate": 14.5,
+      "surtaxRate": null,
+      "exciseRate": null,
+      "customsValue": 22000,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 40,
+          "amount": 8800,
+          "base": 22000
+        },
+        {
+          "type": "VAT",
+          "rate": 14.5,
+          "amount": 4466,
+          "base": 30800
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 6,
+      "description": "Medicaments, mixed or unmixed, for therapeutic use, packaged for retail sale",
+      "hsCode": "30049000",
+      "dutyRate": 25,
+      "vatRate": 0,
+      "surtaxRate": null,
+      "exciseRate": null,
+      "customsValue": 9800,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 25,
+          "amount": 2450,
+          "base": 9800
+        },
+        {
+          "type": "VAT",
+          "rate": 0,
+          "amount": 0,
+          "base": 12250
+        }
+      ]
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 7,
+      "description": "Beer made from malt, in bottles or cans, alcoholic content 4-6%",
+      "hsCode": "22030000",
+      "dutyRate": 60,
+      "vatRate": 14.5,
+      "surtaxRate": null,
+      "exciseRate": 40,
+      "customsValue": 4800,
+      "taxes": [
+        {
+          "type": "CUS",
+          "rate": 60,
+          "amount": 2880,
+          "base": 4800
+        },
+        {
+          "type": "EXC",
+          "rate": 40,
+          "amount": 1920,
+          "base": 4800
+        },
+        {
+          "type": "VAT",
+          "rate": 14.5,
+          "amount": 1392,
+          "base": 9600
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1592 @@
+{
+  "meta": {
+    "ranAt": "2026-06-15T08:54:19.546Z",
+    "totalItems": 17,
+    "datasetMeta": {
+      "extractedAt": "2026-06-15T08:54:10.593Z",
+      "sourceFiles": [
+        {
+          "file": "BOE-2024-001.xml",
+          "itemsExtracted": 5
+        },
+        {
+          "file": "BOE-2024-002.xml",
+          "itemsExtracted": 5
+        },
+        {
+          "file": "BOE-2024-003.xml",
+          "itemsExtracted": 7
+        }
+      ],
+      "totalItems": 17,
+      "withHsCode": 17,
+      "withDescription": 17,
+      "errors": 0
+    }
+  },
+  "results": [
+    {
+      "sourceFile": "BOE-2024-001.xml",
+      "boeNumber": "BOE-ZW-2024-001",
+      "lineNumber": 1,
+      "description": "Mobile cellular telephone handsets, touchscreen, 4G/LTE capable",
+      "actualHs": "85252010",
+      "customsValue": 12500,
+      "xml": {
+        "dutyRate": 40,
+        "vatRate": 14.5,
+        "surtaxRate": 10,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "85252010",
+            "description": "Mobile phones (cellular telephone handsets)",
+            "confidence": 0.5
+          },
+          {
+            "hsCode": "85171410",
+            "description": "- - - Cellular telephone handsets",
+            "confidence": 0.375
+          },
+          {
+            "hsCode": "85169000",
+            "description": "- Parts TELEPHONE SETS, INCLUDING SMARTPHONES AND OTHER FOR CELLULAR NETWORKS WIRELESS NETWORKS; OTHER FOR THE TRANSMISSION VOICE, IMAGES OR OTHER APPARATUS FOR COMMUNICATION WIRED OR WIRELESS NETWORK 'LOCAL OR WIDE AREA NETWORK), THAN TRANSMISSION OR APPARATUS OF HEADING 85.28. - Telephone sets, including smartphones and other telephones for cellular networks or for other wireless networks:",
+            "confidence": 0.25
+          },
+          {
+            "hsCode": "85171100",
+            "description": "- - Line telephone sets with cordless handsets",
+            "confidence": 0.25
+          },
+          {
+            "hsCode": "42010000",
+            "description": "SADDLERY AND HARNESS FOR ANY ANIMAL (INCLUDING TRACES, LEADS, KNEE PADS, MUZZLES, SADDLE CLOTHS, SADDLE BAGS, DOG COATS AND THE LIKE), OF ANY MATERIAL. T R U NKS, SUIT-CASES, VANITY-CASES, BRIEF-CASES, SCHOOL SATCHELS, BINOCULAR CASES, CAMERA INSTRUMENT CASES, GUN SIMILAR CONTAINERS; TRAVELLING-BAGS, FOOD OR BEVERAGES BAGS, HANDBAGS, SHOPPING-BAGS, CASES, CIGARETTE-CASES, BAGS, SPORTS BAGS, BOTTLE-CASES, BOXES, POWDER-BOXES, CUTLERY CONTAINERS, OF LEATHER LEATHER, OF SHEETING MATERIALS, OF VULCANISED PAPERBOARD, OR WHOLLY SUCH MATERIALS OR WITH - Trunks, suit-cases, vanity- cases, executive-cases, brief- cases, school satchels and similar containers :",
+            "confidence": 0.154
+          }
+        ],
+        "predictedHs": "85252010",
+        "confidence": 0.5,
+        "correctTop1": true,
+        "correctTop3": true,
+        "correctTop5": true,
+        "chapterMatch": true,
+        "headingMatch": true
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 40,
+        "engineVat": 14.5,
+        "engineSurtax": 10,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": null,
+        "siReferences": [
+          "SI 35/2024",
+          "SI 50A/2025"
+        ],
+        "notes": "Surtax on mobile phones per SI 50A/2025"
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": false,
+        "exportLicRequired": false,
+        "licenceRequired": false,
+        "licenceType": null,
+        "issuingAuthority": null,
+        "siReference": "SI 35/2024"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": false,
+        "threshold": 1000,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": true,
+        "surtaxRate": 10,
+        "category": "Electronics and electrical equipment",
+        "si": "SI 50A/2025",
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-001.xml",
+      "boeNumber": "BOE-ZW-2024-001",
+      "lineNumber": 2,
+      "description": "Portable automatic data processing machines, laptops, weight not exceeding 10kg",
+      "actualHs": "84713000",
+      "customsValue": 18000,
+      "xml": {
+        "dutyRate": 25,
+        "vatRate": 14.5,
+        "surtaxRate": null,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "84433100",
+            "description": "- - Machines which perform two or more of the functions of printing, copying or facsimile transmission, capable of connecting to an automatic data processing machine or to a network",
+            "confidence": 0.4
+          },
+          {
+            "hsCode": "84709090",
+            "description": "- - - Other AUTOMATIC DATA PROCESSING MACHINES AND UNITS THEREOF; MAGNETIC OR OPTICAL READERS, MACHINES FOR TRANSCRIBING DATA ONTO DATA MEDIA IN CODED FORM AND MACHINES FOR PROCESSING SUCH DATA, ELSEWHERE SPECIFIED OR INCLUDED.",
+            "confidence": 0.4
+          },
+          {
+            "hsCode": "84718000",
+            "description": "- Other units of automatic data processing machines",
+            "confidence": 0.4
+          },
+          {
+            "hsCode": "84713000",
+            "description": "Laptop computers (portable ADP machines ≤ 10 kg)",
+            "confidence": 0.3
+          },
+          {
+            "hsCode": "04011000",
+            "description": "- Of a fat content, by weight, not exceeding 1%",
+            "confidence": 0.3
+          }
+        ],
+        "predictedHs": "84433100",
+        "confidence": 0.4,
+        "correctTop1": false,
+        "correctTop3": false,
+        "correctTop5": true,
+        "chapterMatch": true,
+        "headingMatch": false
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 25,
+        "engineVat": 14.5,
+        "engineSurtax": 0,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": "ZIMRA/SAZ (CBCA)",
+        "siReferences": [
+          "SI 35/2024"
+        ],
+        "notes": null
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": false,
+        "exportLicRequired": false,
+        "licenceRequired": false,
+        "licenceType": null,
+        "issuingAuthority": "ZIMRA/SAZ (CBCA)",
+        "siReference": "SI 35/2024"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": false,
+        "threshold": 1000,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": false,
+        "surtaxRate": 0,
+        "category": null,
+        "si": null,
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-001.xml",
+      "boeNumber": "BOE-ZW-2024-001",
+      "lineNumber": 3,
+      "description": "Monitors, LCD flat panel display units for use with ADP machines",
+      "actualHs": "85285200",
+      "customsValue": 6000,
+      "xml": {
+        "dutyRate": 25,
+        "vatRate": 14.5,
+        "surtaxRate": null,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "84433200",
+            "description": "Other printers for use with ADP machines",
+            "confidence": 0.455
+          },
+          {
+            "hsCode": "85285200",
+            "description": "Monitors — LCD/LED for ADP machines",
+            "confidence": 0.455
+          },
+          {
+            "hsCode": "84863000",
+            "description": "- Machines and apparatus for the manufacture of flat panel displays",
+            "confidence": 0.455
+          },
+          {
+            "hsCode": "84039000",
+            "description": "- Parts AUXILIARY PLANT FOR USE WITH BOILERS OF HEADING 84.02 OR 84.03 (FOR EXAMPLE, ECONOMISERS, SUPER- HEATERS, SOOT REMOVERS, GAS RECOVERERS); CONDENSERS FOR STEAM OR OTHER VAPOUR POWER UNITS. - Auxiliary plant for use with boilers of heading 84.02 or 84.03 :",
+            "confidence": 0.364
+          },
+          {
+            "hsCode": "84485110",
+            "description": "- - - For use with knitting machines of the household type",
+            "confidence": 0.364
+          }
+        ],
+        "predictedHs": "84433200",
+        "confidence": 0.455,
+        "correctTop1": false,
+        "correctTop3": true,
+        "correctTop5": true,
+        "chapterMatch": false,
+        "headingMatch": false
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 25,
+        "engineVat": 14.5,
+        "engineSurtax": 0,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": "ZIMRA/SAZ (CBCA)",
+        "siReferences": [
+          "SI 35/2024"
+        ],
+        "notes": null
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": false,
+        "exportLicRequired": false,
+        "licenceRequired": false,
+        "licenceType": null,
+        "issuingAuthority": "ZIMRA/SAZ (CBCA)",
+        "siReference": "SI 35/2024"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": false,
+        "threshold": 1000,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": false,
+        "surtaxRate": 0,
+        "category": "Electronics and electrical equipment",
+        "si": null,
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-001.xml",
+      "boeNumber": "BOE-ZW-2024-001",
+      "lineNumber": 4,
+      "description": "Machines for receiving, converting, transmitting data — networking routers and switches",
+      "actualHs": "85176200",
+      "customsValue": 4500,
+      "xml": {
+        "dutyRate": 25,
+        "vatRate": 14.5,
+        "surtaxRate": null,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "85176200",
+            "description": "Machines for receiving, converting, transmitting data (networking equipment)",
+            "confidence": 0.7
+          },
+          {
+            "hsCode": "84709090",
+            "description": "- - - Other AUTOMATIC DATA PROCESSING MACHINES AND UNITS THEREOF; MAGNETIC OR OPTICAL READERS, MACHINES FOR TRANSCRIBING DATA ONTO DATA MEDIA IN CODED FORM AND MACHINES FOR PROCESSING SUCH DATA, ELSEWHERE SPECIFIED OR INCLUDED.",
+            "confidence": 0.4
+          },
+          {
+            "hsCode": "82042000",
+            "description": "- Interchangeable spanner sockets with or without handles HAND TOOLS (INCLUDING DIAMONDS), NOT ELSEWHERE INCLUDED; BLOW LAMPS; AND THE LIKE, OTHER THAN FOR AND PARTS OF, MACHINE-TOOLS WATER-JET CUTTING MACHINES; PORTABLE FORGES; HAND OPERATED GRINDING WHEELS FRAMEWORKS.",
+            "confidence": 0.3
+          },
+          {
+            "hsCode": "84149000",
+            "description": "- Parts AIR CONDITIONING MACHINES, COMPRISING A MOTOR- DRIVEN FAN AND ELEMENTS FOR CHANGING THE TEMPERATURE AND HUMIDITY, INCLUDING THOSE MACHINES IN WHICH THE HUMIDITY CAN NOT BE SEPERATELY REGULATED.",
+            "confidence": 0.3
+          },
+          {
+            "hsCode": "84185000",
+            "description": "- Other furniture (chests, cabinets, display counters, show-cases and the like) for storage and display, incorporating refrigerating or freezing equipment - Other refrigerating or freezing equipment; heat pumps: - - Heat pumps other than air conditioning machines of Heading 84.15 :",
+            "confidence": 0.3
+          }
+        ],
+        "predictedHs": "85176200",
+        "confidence": 0.7,
+        "correctTop1": true,
+        "correctTop3": true,
+        "correctTop5": true,
+        "chapterMatch": true,
+        "headingMatch": true
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 25,
+        "engineVat": 14.5,
+        "engineSurtax": 0,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": "ZIMRA/SAZ (CBCA)",
+        "siReferences": [
+          "SI 35/2024"
+        ],
+        "notes": null
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": false,
+        "exportLicRequired": false,
+        "licenceRequired": false,
+        "licenceType": null,
+        "issuingAuthority": "ZIMRA/SAZ (CBCA)",
+        "siReference": "SI 35/2024"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": false,
+        "threshold": 1000,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": false,
+        "surtaxRate": 0,
+        "category": "Electronics and electrical equipment",
+        "si": null,
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-001.xml",
+      "boeNumber": "BOE-ZW-2024-001",
+      "lineNumber": 5,
+      "description": "Photovoltaic cells and solar modules, for electricity generation",
+      "actualHs": "85414090",
+      "customsValue": 8000,
+      "xml": {
+        "dutyRate": 0,
+        "vatRate": 0,
+        "surtaxRate": null,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "85413000",
+            "description": "- Thyristors, diacs and triacs, other than photosensitive devices - Photosensitive semiconductor devices, including photovoltaic cells whether or not assembled in modules or made up into panels; light-emitting diodes (LED):",
+            "confidence": 0.575
+          },
+          {
+            "hsCode": "85414090",
+            "description": "Photovoltaic cells (solar cells/modules)",
+            "confidence": 0.5
+          },
+          {
+            "hsCode": "85369000",
+            "description": "- Other apparatus BOARDS, PANELS, CONSOLES, CABINETS AND OTHER BASES, WITH TWO OR MORE APPARATUS HEADING 85.35 OR 85.36, FOR CONTROL OR THE DISTRIBUTION ELECTRICITY INCLUDING INCORPORATING INSTRUMENTS APPARATUS OF CHAPTER NUMERICAL CONTROL APPARATUS, THAN SWITCHING APPARATUS 85.17.",
+            "confidence": 0.45
+          },
+          {
+            "hsCode": "85409900",
+            "description": "- - Other SEMICONDUCTOR DEVICES DIODES, TRANSISTORS, SEMICONDUCTOR- BASED TRANSDUCERS); PHOTOSENSITIVE SEMICONDUCTOR DEVICES, PHOTOVOLTAIC CELLS WHETHER ASSEMBLED IN MODULES PANELS; LIGHT-EMITTING WHETHER OR NOT ASSEMBLED LIGHT-EMITTING DIODES PIEZO-ELECTRIC CRYSTALS.",
+            "confidence": 0.45
+          },
+          {
+            "hsCode": "85414200",
+            "description": "- - Photovoltaic cells not assembled in modules or made up into panels",
+            "confidence": 0.45
+          }
+        ],
+        "predictedHs": "85413000",
+        "confidence": 0.575,
+        "correctTop1": false,
+        "correctTop3": true,
+        "correctTop5": true,
+        "chapterMatch": true,
+        "headingMatch": true
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 0,
+        "engineVat": 0,
+        "engineSurtax": 0,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": null,
+        "siReferences": [],
+        "notes": "Duty-free and VAT-exempt to promote renewable energy adoption"
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": false,
+        "exportLicRequired": false,
+        "licenceRequired": false,
+        "licenceType": null,
+        "issuingAuthority": null,
+        "siReference": null
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": false,
+        "cbcaAlways": false,
+        "threshold": null,
+        "siReference": "SI 35/2024",
+        "triggerNote": null
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": false,
+        "surtaxRate": 0,
+        "category": "Electronics and electrical equipment",
+        "si": null,
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-002.xml",
+      "boeNumber": "BOE-ZW-2024-002",
+      "lineNumber": 1,
+      "description": "T-shirts, singlets and other vests of cotton, knitted or crocheted, men's",
+      "actualHs": "61091000",
+      "customsValue": 3200,
+      "xml": {
+        "dutyRate": 40,
+        "vatRate": 14.5,
+        "surtaxRate": 30,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "62069000",
+            "description": "- Of other textile materials MEN'S OR BOYS' SINGLETS AND OTHER VESTS, UNDERPANTS, BRIEFS, NIGHT SHIRTS, PYJAMAS, BATHROBES, DRESSING GOWNS AND SIMILAR ARTICLES. - Underpants and briefs:",
+            "confidence": 0.727
+          },
+          {
+            "hsCode": "61091000",
+            "description": "T-shirts, singlets etc. of cotton (knitted or crocheted)",
+            "confidence": 0.636
+          },
+          {
+            "hsCode": "61029000",
+            "description": "- Of other textile materials MEN'S OR BOYS' SUITS, ENSEMBLES, JACKETS, BLAZERS, TROUSERS, BIB AND BRACE OVERALLS, BREECHES AND SHORTS (OTHER THAN SWIMWEAR), KNITTED OR CROCHETED.",
+            "confidence": 0.636
+          },
+          {
+            "hsCode": "61046900",
+            "description": "- - Of other textile materials MEN'S OR BOYS' SHIRTS, KNITTED OR CROCHETED.",
+            "confidence": 0.636
+          },
+          {
+            "hsCode": "61069000",
+            "description": "- Of other textile materials MEN'S OR BOYS' UNDERPANTS, BRIEFS, NIGHTSHIRTS, PYJAMAS, BATHROBES, DRESSING GOWNS AND SIMILAR ARTICLES, KNITTED OR CROCHETED - Underpants and briefs:",
+            "confidence": 0.636
+          }
+        ],
+        "predictedHs": "62069000",
+        "confidence": 0.727,
+        "correctTop1": false,
+        "correctTop3": true,
+        "correctTop5": true,
+        "chapterMatch": false,
+        "headingMatch": false
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 40,
+        "engineVat": 14.5,
+        "engineSurtax": 30,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": "ZIMRA/SAZ (CBCA)",
+        "siReferences": [
+          "SI 35/2024",
+          "SI 50A/2025"
+        ],
+        "notes": "Surtax on clothing per SI 50A/2025"
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": false,
+        "exportLicRequired": false,
+        "licenceRequired": false,
+        "licenceType": null,
+        "issuingAuthority": "ZIMRA/SAZ (CBCA)",
+        "siReference": "SI 35/2024"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": false,
+        "threshold": 1000,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": true,
+        "surtaxRate": 30,
+        "category": "Knitted or crocheted clothing",
+        "si": "SI 50A/2025",
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-002.xml",
+      "boeNumber": "BOE-ZW-2024-002",
+      "lineNumber": 2,
+      "description": "Men's suits of synthetic fibres, woven, not knitted",
+      "actualHs": "62031200",
+      "customsValue": 5600,
+      "xml": {
+        "dutyRate": 40,
+        "vatRate": 14.5,
+        "surtaxRate": 30,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "62031200",
+            "description": "Men's suits of synthetic fibres",
+            "confidence": 0.625
+          },
+          {
+            "hsCode": "55129990",
+            "description": "- - - Other WOVEN FABRICS OF SYNTHETIC STAPLE FIBRES, CONTAINING LESS THAN 85% BY WEIGHT OF SUCH FIBRES, MIXED MAINLY OR SOLELY WITH COTTON, OF A WEIGHT NOT EXCEEDING 170 g/m2. - Unbleached or bleached :",
+            "confidence": 0.625
+          },
+          {
+            "hsCode": "63049300",
+            "description": "- - Not knitted or crocheted, of synthetic fibres",
+            "confidence": 0.625
+          },
+          {
+            "hsCode": "52095900",
+            "description": "- - Other fabrics WOVEN FABRICS OF COTTON, CONTAINING LESS THAN 85% BY WEIGHT OF COTTON, MIXED MAINLY OR SOLELY WITH MAN- MADE FIBRES, WEIGHING NOT MORE 200g/m2. THAN - Unbleached:",
+            "confidence": 0.5
+          },
+          {
+            "hsCode": "55029000",
+            "description": "- Other SYNTHETIC STAPLE FIBRES, NOT CARDED, COMBED OR OTHERWISE PROCESSED FOR SPINNING. - Of nylon or other polyamides:",
+            "confidence": 0.5
+          }
+        ],
+        "predictedHs": "62031200",
+        "confidence": 0.625,
+        "correctTop1": true,
+        "correctTop3": true,
+        "correctTop5": true,
+        "chapterMatch": true,
+        "headingMatch": true
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 40,
+        "engineVat": 14.5,
+        "engineSurtax": 30,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": "ZIMRA/SAZ (CBCA)",
+        "siReferences": [
+          "SI 35/2024",
+          "SI 50A/2025"
+        ],
+        "notes": null
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": false,
+        "exportLicRequired": false,
+        "licenceRequired": false,
+        "licenceType": null,
+        "issuingAuthority": "ZIMRA/SAZ (CBCA)",
+        "siReference": "SI 35/2024"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": false,
+        "threshold": 1000,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": true,
+        "surtaxRate": 30,
+        "category": "Woven clothing accessories",
+        "si": "SI 50A/2025",
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-002.xml",
+      "boeNumber": "BOE-ZW-2024-002",
+      "lineNumber": 3,
+      "description": "Plain woven fabrics of cotton, 85% or more cotton by weight, not more than 200g/m2, unbleached",
+      "actualHs": "52081200",
+      "customsValue": 2800,
+      "xml": {
+        "dutyRate": 40,
+        "vatRate": 14.5,
+        "surtaxRate": 30,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "52085900",
+            "description": "- - Other fabrics WOVEN FABRICS OF COTTON, CONTAINING 85% OR MORE BY WEIGHT OF COTTON, WEIGHING MORE THAN 200g/m2. - Unbleached: - - Plain weave",
+            "confidence": 0.941
+          },
+          {
+            "hsCode": "52095900",
+            "description": "- - Other fabrics WOVEN FABRICS OF COTTON, CONTAINING LESS THAN 85% BY WEIGHT OF COTTON, MIXED MAINLY OR SOLELY WITH MAN- MADE FIBRES, WEIGHING NOT MORE 200g/m2. THAN - Unbleached:",
+            "confidence": 0.941
+          },
+          {
+            "hsCode": "52079000",
+            "description": "- Other WOVEN FABRICS OF COTTON, CONTAINING 85% OR MORE BY WEIGHT OF COTTON, WEIGHING NOT MORE THAN 200 g/m². - Unbleached:",
+            "confidence": 0.824
+          },
+          {
+            "hsCode": "52105900",
+            "description": "- - Other fabrics WOVEN FABRICS OF COTTON, CONTAINING LESS THAN 85% BY WEIGHT OF COTTON, MIXED MAINLY OR SOLELY WITH MAN- MADE FIBRES, WEIGHING MORE THAN 200 g/m2. - Unbleached:",
+            "confidence": 0.824
+          },
+          {
+            "hsCode": "55129990",
+            "description": "- - - Other WOVEN FABRICS OF SYNTHETIC STAPLE FIBRES, CONTAINING LESS THAN 85% BY WEIGHT OF SUCH FIBRES, MIXED MAINLY OR SOLELY WITH COTTON, OF A WEIGHT NOT EXCEEDING 170 g/m2. - Unbleached or bleached :",
+            "confidence": 0.765
+          }
+        ],
+        "predictedHs": "52085900",
+        "confidence": 0.941,
+        "correctTop1": false,
+        "correctTop3": false,
+        "correctTop5": false,
+        "chapterMatch": true,
+        "headingMatch": true
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 40,
+        "engineVat": 14.5,
+        "engineSurtax": 30,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": null,
+        "siReferences": [
+          "SI 35/2024",
+          "SI 50A/2025"
+        ],
+        "notes": "Surtax on textile fabrics per SI 50A/2025"
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": false,
+        "exportLicRequired": false,
+        "licenceRequired": false,
+        "licenceType": null,
+        "issuingAuthority": null,
+        "siReference": "SI 35/2024"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": false,
+        "threshold": 1000,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": true,
+        "surtaxRate": 30,
+        "category": "Cotton fabrics",
+        "si": "SI 50A/2025",
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-002.xml",
+      "boeNumber": "BOE-ZW-2024-002",
+      "lineNumber": 4,
+      "description": "Footwear with outer soles of rubber or plastics, uppers of leather, covering ankle, other",
+      "actualHs": "64039110",
+      "customsValue": 4100,
+      "xml": {
+        "dutyRate": 40,
+        "vatRate": 14.5,
+        "surtaxRate": 20,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "64029900",
+            "description": "- - Other FOOTWEAR WITH OUTER SOLES OF RUBBER, PLASTICS, LEATHER OR COMPOSITION LEATHER AND UPPERS OF LEATHER. - Sports footwear :",
+            "confidence": 0.857
+          },
+          {
+            "hsCode": "64039900",
+            "description": "- - Other FOOTWEAR WITH OUTER SOLES OF RUBBER, PLASTICS, LEATHER OR COMPOSITION LEATHER AND UPPERS OF TEXTILE MATERIALS. - Footwear with outer soles of rubber or plastics:",
+            "confidence": 0.857
+          },
+          {
+            "hsCode": "64039110",
+            "description": "Footwear with outer soles of rubber/plastics, uppers of leather (other)",
+            "confidence": 0.786
+          },
+          {
+            "hsCode": "64019900",
+            "description": "- - Other OTHER FOOTWEAR WITH OUTER SOLES AND UPPERS OF RUBBER OR PLASTICS. - Sports footwear :",
+            "confidence": 0.786
+          },
+          {
+            "hsCode": "64021200",
+            "description": "Ski footwear with outer soles and uppers of rubber/plastics",
+            "confidence": 0.643
+          }
+        ],
+        "predictedHs": "64029900",
+        "confidence": 0.857,
+        "correctTop1": false,
+        "correctTop3": true,
+        "correctTop5": true,
+        "chapterMatch": true,
+        "headingMatch": false
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 40,
+        "engineVat": 14.5,
+        "engineSurtax": 20,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": null,
+        "siReferences": [
+          "SI 35/2024",
+          "SI 50A/2025"
+        ],
+        "notes": "Surtax on footwear per SI 50A/2025"
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": false,
+        "exportLicRequired": false,
+        "licenceRequired": false,
+        "licenceType": null,
+        "issuingAuthority": null,
+        "siReference": "SI 35/2024"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": false,
+        "threshold": 1000,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": true,
+        "surtaxRate": 20,
+        "category": "Footwear",
+        "si": "SI 50A/2025",
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-002.xml",
+      "boeNumber": "BOE-ZW-2024-002",
+      "lineNumber": 5,
+      "description": "Used or second-hand clothing of other textile materials, sorted and baled",
+      "actualHs": "63092000",
+      "customsValue": 950,
+      "xml": {
+        "dutyRate": 40,
+        "vatRate": 14.5,
+        "surtaxRate": 30,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "63090000",
+            "description": "WORN CLOTHING AND OTHER WORN ARTICLES. USED OR NEW RAGS, SCRAP TWINE, CORDAGE, ROPE AND CABLES AND WORN OUT ARTICLES OF TWINE, CORDAGE, ROPE OR CABLES, OF TEXTILE MATERIALS. - Sorted :",
+            "confidence": 0.75
+          },
+          {
+            "hsCode": "59111000",
+            "description": "- Textile fabrics, felt and felt- lined woven fabrics, coated, covered or laminated with rubber, leather or other material, of a kind used for card clothing, and similar fabrics of a kind used for other technical purposes, including narrow fabrics made of velvet impregnated with rubber, for covering weaving spindles (weaving beams)",
+            "confidence": 0.667
+          },
+          {
+            "hsCode": "61109000",
+            "description": "- Of other textile materials BABIES' GARMENTS AND CLOTHING ACCESSORIES, KNITTED OR CROCHETED.",
+            "confidence": 0.583
+          },
+          {
+            "hsCode": "63049900",
+            "description": "- - Not knitted or crocheted, of other textile materials SACKS AND BAGS, OF A KIND USED FOR THE PACKING OF GOODS.",
+            "confidence": 0.583
+          },
+          {
+            "hsCode": "63092000",
+            "description": "Used clothing, of other textile materials",
+            "confidence": 0.5
+          }
+        ],
+        "predictedHs": "63090000",
+        "confidence": 0.75,
+        "correctTop1": false,
+        "correctTop3": false,
+        "correctTop5": true,
+        "chapterMatch": true,
+        "headingMatch": true
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 40,
+        "engineVat": 14.5,
+        "engineSurtax": 30,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": null,
+        "siReferences": [
+          "SI 35/2024",
+          "SI 50A/2025"
+        ],
+        "notes": "Used clothing (secondhand) — surtax applies"
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": false,
+        "exportLicRequired": false,
+        "licenceRequired": false,
+        "licenceType": null,
+        "issuingAuthority": null,
+        "siReference": "SI 35/2024"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": false,
+        "threshold": 1000,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": true,
+        "surtaxRate": 30,
+        "category": "Made-up textile articles",
+        "si": "SI 50A/2025",
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 1,
+      "description": "Maize (corn), other than seed maize, for human consumption",
+      "actualHs": "10059000",
+      "customsValue": 15000,
+      "xml": {
+        "dutyRate": 5,
+        "vatRate": 0,
+        "surtaxRate": null,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "10059000",
+            "description": "Maize (corn), other than seed",
+            "confidence": 0.667
+          },
+          {
+            "hsCode": "38210000",
+            "description": "PREPARED CULTURE MEDIA FOR THE DEVELOPMENT OR MAINTENANCE OF MICRO-ORGANISMS (INCLUDING VIRUSES AND THE LIKE) OR OF PLANT, HUMAN OR ANIMALS CELLS. DIAGNOSTIC OR LABORATORY REAGENTS ON A BACKING, PREPARED DIAGNOSTIC OR LABORATORY REAGENTS WHETHER OR NOT ON A BACKING, WHETHER OR NOT PUT UP IN THE FORM OF KITS, OTHER THAN THOSE OF HEADING 30.06; CERTIFIED REFERENCE MATERIALS. - Diagnostic or laboratory reagents on a backing, prepared diagnostic or laboratory reagents whether or not on a backing, whether or not put up in the form of kits:",
+            "confidence": 0.511
+          },
+          {
+            "hsCode": "03089000",
+            "description": "- Other FLOURS, MEALS AND PELLETS OF FISH, CRUSTACEANS, MOLLUSCS AND OTHER AQUATIC INVERTEBRATES, FIT FOR HUMAN CONSUMPTION. - Of fish:",
+            "confidence": 0.444
+          },
+          {
+            "hsCode": "05100000",
+            "description": "AMBERGRIS, CASTOREUM, CIVET AND MUSK; CANTHARIDES; BILE, WHETHER OR NOT DRIED; GLANDS AND OTHER ANIMAL PRODUCTS USED IN THE PREPARATION OF PHARMACEUTICAL PRODUCTS, FRESH, CHILLED, FROZEN OR OTHERWISE PROVISIONALLY PRESERVED. ANIMAL PRODUCTS NOT ELSEWHERE SPECIFIED OR INCLUDED; DEAD ANIMALS OF CHAPTER 1 OR 3, UNFIT FOR HUMAN CONSUMPTION.",
+            "confidence": 0.444
+          },
+          {
+            "hsCode": "10049000",
+            "description": "- Other MAIZE (CORN).",
+            "confidence": 0.444
+          }
+        ],
+        "predictedHs": "10059000",
+        "confidence": 0.667,
+        "correctTop1": true,
+        "correctTop3": true,
+        "correctTop5": true,
+        "chapterMatch": true,
+        "headingMatch": true
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 5,
+        "engineVat": 0,
+        "engineSurtax": 0,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": "Grain Marketing Board",
+        "siReferences": [
+          "SI 122/2017",
+          "SI 35/2024"
+        ],
+        "notes": null
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": true,
+        "exportLicRequired": true,
+        "licenceRequired": true,
+        "licenceType": "GMB Import/Export Permit",
+        "issuingAuthority": "Grain Marketing Board",
+        "siReference": "SI 122/2017"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": false,
+        "threshold": 1000,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": false,
+        "surtaxRate": 0,
+        "category": null,
+        "si": null,
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 2,
+      "description": "Diesel fuel (gas oil), automotive, sulphur content not exceeding 50 ppm",
+      "actualHs": "27101941",
+      "customsValue": 25000,
+      "xml": {
+        "dutyRate": 10,
+        "vatRate": 14.5,
+        "surtaxRate": null,
+        "exciseRate": 30
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "27101941",
+            "description": "Diesel fuel (gas oil)",
+            "confidence": 0.364
+          },
+          {
+            "hsCode": "27101991",
+            "description": "- - - - Lubricating oils and blending stocks for lubricating oils in immediate packings of a content not exceeding 210 l",
+            "confidence": 0.364
+          },
+          {
+            "hsCode": "36061000",
+            "description": "- Liquid or liquefied gas fuels in containers of a kind used for filling or refilling cigarettes or similar lighters and of a capacity not exceeding 300 cm3",
+            "confidence": 0.364
+          },
+          {
+            "hsCode": "38260000",
+            "description": "BIODIESEL AND MIXTURES THEREOF, NOT CONTAINING OR CONTAINING LESS THAN 70% BY WEIGHT OF PETROLEUM OILS OR OILS OBTAINED FROM BITUMINOUS MINERALS. MIXTURES CONTAINING HALOGENATED DERIVATIVES OF METHANE, ETHANE OR PROPANE, NOT ELSEWHERE SPECIFIED OR INCLUDED. - Containing chlorofluorocarbons whether or not containing hydrochlorofluorocarbons (HCFCs), perfluorocarbons (PFCs) or hydrofluorocarbons (HFCs); containing hydrobromofluorocarbons (HBFCs); containing carbon tetrachloride; containing 1,1,1-trichloroethane chloroform) :",
+            "confidence": 0.327
+          },
+          {
+            "hsCode": "04011000",
+            "description": "- Of a fat content, by weight, not exceeding 1%",
+            "confidence": 0.273
+          }
+        ],
+        "predictedHs": "27101941",
+        "confidence": 0.364,
+        "correctTop1": true,
+        "correctTop3": true,
+        "correctTop5": true,
+        "chapterMatch": true,
+        "headingMatch": true
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 10,
+        "engineVat": 14.5,
+        "engineSurtax": 0,
+        "engineExcise": 30,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": "Ministry of Energy and Power Development",
+        "siReferences": [
+          "SI 122/2017",
+          "SI 35/2024"
+        ],
+        "notes": "CBCA always required — fuel products"
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": true,
+        "exportLicRequired": false,
+        "licenceRequired": true,
+        "licenceType": "Petroleum Import Licence",
+        "issuingAuthority": "Ministry of Energy and Power Development",
+        "siReference": "SI 122/2017"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": true,
+        "threshold": null,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required for ALL shipments of this commodity — value is irrelevant"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": false,
+        "surtaxRate": 0,
+        "category": null,
+        "si": null,
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 3,
+      "description": "Urea, whether or not in aqueous solution, for agricultural use as fertiliser",
+      "actualHs": "31021000",
+      "customsValue": 8500,
+      "xml": {
+        "dutyRate": 0,
+        "vatRate": 0,
+        "surtaxRate": null,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "31021000",
+            "description": "Urea, whether or not in aqueous solution (fertiliser)",
+            "confidence": 0.667
+          },
+          {
+            "hsCode": "31023000",
+            "description": "- Ammonium nitrate, whether or not in aqueous solution",
+            "confidence": 0.55
+          },
+          {
+            "hsCode": "59100000",
+            "description": "TRANSMISSION OR CONVEYOR BELTS OR BELTING , OF TEXTILE MATERIAL, WHETHER OR NOT IMPREGNATED, COATED, COVERED OR LAMINATED WITH PLASTICS, OR REINFORCED WITH METAL OR OTHER MATERIAL. TEXTILE PRODUCTS AND ARTICLES, FOR TECHNICAL USES, SPECIFIED IN NOTE 8 TO THIS CHAPTER.",
+            "confidence": 0.5
+          },
+          {
+            "hsCode": "31028000",
+            "description": "- Mixtures of urea and ammonium nitrate in aqueous or ammoniacal solution",
+            "confidence": 0.467
+          },
+          {
+            "hsCode": "05100000",
+            "description": "AMBERGRIS, CASTOREUM, CIVET AND MUSK; CANTHARIDES; BILE, WHETHER OR NOT DRIED; GLANDS AND OTHER ANIMAL PRODUCTS USED IN THE PREPARATION OF PHARMACEUTICAL PRODUCTS, FRESH, CHILLED, FROZEN OR OTHERWISE PROVISIONALLY PRESERVED. ANIMAL PRODUCTS NOT ELSEWHERE SPECIFIED OR INCLUDED; DEAD ANIMALS OF CHAPTER 1 OR 3, UNFIT FOR HUMAN CONSUMPTION.",
+            "confidence": 0.417
+          }
+        ],
+        "predictedHs": "31021000",
+        "confidence": 0.667,
+        "correctTop1": true,
+        "correctTop3": true,
+        "correctTop5": true,
+        "chapterMatch": true,
+        "headingMatch": true
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 0,
+        "engineVat": 0,
+        "engineSurtax": 0,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": "Ministry of Agriculture — Fertiliser Inspectorate",
+        "siReferences": [
+          "SI 122/2017"
+        ],
+        "notes": "Duty-free; fertiliser exemption applies"
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": true,
+        "exportLicRequired": false,
+        "licenceRequired": true,
+        "licenceType": "Fertiliser Import Permit",
+        "issuingAuthority": "Ministry of Agriculture — Fertiliser Inspectorate",
+        "siReference": "SI 122/2017"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": false,
+        "cbcaAlways": false,
+        "threshold": null,
+        "siReference": "SI 35/2024",
+        "triggerNote": null
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": false,
+        "surtaxRate": 0,
+        "category": null,
+        "si": null,
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 4,
+      "description": "Frozen whole chickens, not cut up, of domestic fowl",
+      "actualHs": "20712000",
+      "customsValue": 3200,
+      "xml": {
+        "dutyRate": 40,
+        "vatRate": 0,
+        "surtaxRate": 20,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "02071200",
+            "description": "Frozen whole chickens, not cut",
+            "confidence": 0.556
+          },
+          {
+            "hsCode": "07119000",
+            "description": "- Other vegetables; mixtures of vegetables DRIED VEGETABLES, WHOLE, CUT, SLICED, BROKEN OR IN POWDER, BUT NOT FURTHER PREPARED.",
+            "confidence": 0.444
+          },
+          {
+            "hsCode": "02069000",
+            "description": "- Other, frozen MEAT AND EDIBLE OFFAL, OF THE POULTRY OF HEADING 01.05, FRESH, CHILLED OR FROZEN. - Of fowls of the species Gallus domesticus:",
+            "confidence": 0.333
+          },
+          {
+            "hsCode": "02072500",
+            "description": "- - Not cut in pieces, frozen",
+            "confidence": 0.333
+          },
+          {
+            "hsCode": "02072700",
+            "description": "- - Cuts and offal, frozen - Of ducks:",
+            "confidence": 0.333
+          }
+        ],
+        "predictedHs": "02071200",
+        "confidence": 0.556,
+        "correctTop1": false,
+        "correctTop3": false,
+        "correctTop5": false,
+        "chapterMatch": false,
+        "headingMatch": false
+      },
+      "tariff": {
+        "skipped": true,
+        "reason": "HS 20712000 not in tariff DB"
+      },
+      "licence": {
+        "skipped": true,
+        "reason": "HS 20712000 not in licence DB"
+      },
+      "cbca": {
+        "skipped": true,
+        "reason": "HS 20712000 not in CBCA DB"
+      },
+      "surtax": {
+        "skipped": true,
+        "reason": "HS 20712000 not in surtax DB"
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 5,
+      "description": "Passenger motor vehicles, spark-ignition internal combustion engine, cylinder capacity 1500cc to 3000cc, other",
+      "actualHs": "87032319",
+      "customsValue": 22000,
+      "xml": {
+        "dutyRate": 40,
+        "vatRate": 14.5,
+        "surtaxRate": null,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "87031000",
+            "description": "- Vehicles specially designed for travelling on snow; golf cars and similar vehicles - Other vehicles, with only spark-ignition internal combustion piston engine: - - Of a cylinder capacity not exceeding 1,000 cc :",
+            "confidence": 0.643
+          },
+          {
+            "hsCode": "87034000",
+            "description": "- Other vehicles, with both spark-ignition internal combustion piston engine and electric motor as motors for propulsion, other than those capable of being charged by plugging to external source of electric power",
+            "confidence": 0.643
+          },
+          {
+            "hsCode": "87036000",
+            "description": "- Other vehicles, with both spark-ignition internal combustion piston engine and electric motor as motors for propulsion, capable of being charged by plugging to external source of electric power",
+            "confidence": 0.643
+          },
+          {
+            "hsCode": "87035000",
+            "description": "- Other vehicles, with both compresion- ignition internal combustion piston engine (diesel or semi-diesel) and electric motor as motors for propulsion, other than those capable of being charged by plugging to external source of electric power",
+            "confidence": 0.571
+          },
+          {
+            "hsCode": "87037000",
+            "description": "- Other vehicles, with both compresion- ignition internal combustion piston engine (diesel or semi-diesel) and electric motor as motors for propulsion, capable of being charged by plugging to external source of electric power",
+            "confidence": 0.571
+          }
+        ],
+        "predictedHs": "87031000",
+        "confidence": 0.643,
+        "correctTop1": false,
+        "correctTop3": false,
+        "correctTop5": false,
+        "chapterMatch": true,
+        "headingMatch": true
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 40,
+        "engineVat": 14.5,
+        "engineSurtax": 0,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": "Zimbabwe Revenue Authority",
+        "siReferences": [
+          "SI 35/2024",
+          "SI 157/2024"
+        ],
+        "notes": "CBCA always required for motor vehicles"
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": false,
+        "exportLicRequired": false,
+        "licenceRequired": false,
+        "licenceType": null,
+        "issuingAuthority": "Zimbabwe Revenue Authority",
+        "siReference": "SI 35/2024"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": true,
+        "threshold": null,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required for ALL shipments of this commodity — value is irrelevant"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": false,
+        "surtaxRate": 0,
+        "category": null,
+        "si": null,
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 6,
+      "description": "Medicaments, mixed or unmixed, for therapeutic use, packaged for retail sale",
+      "actualHs": "30049000",
+      "customsValue": 9800,
+      "xml": {
+        "dutyRate": 25,
+        "vatRate": 0,
+        "surtaxRate": null,
+        "exciseRate": null
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "30029000",
+            "description": "- Other MEDICAMENTS (EXCLUDING GOODS OF HEADING 30.02, OR 30.06) CONSISTING OF MORE CONSTITUENTS WHICH HAVE BEEN MIXED TOGETHER FOR THERAPEUTIC OR PROPHYLACTIC USES, NOT UP IN MEASURED DOSES OR FORMS OR PACKINGS FOR RETAIL SALE.",
+            "confidence": 0.818
+          },
+          {
+            "hsCode": "30039090",
+            "description": "- - - Other MEDICAMENTS (EXCLUDING GOODS OF HEADING 30.02, OR 30.06) CONSISTING OF OR UNMIXED PRODUCTS THERAPEUTIC OR PROPHYLACTIC USES, PUT MEASURED DOSES (INCLUDING THOSE IN THE FORM OF TRANSDERMAL ADMINISTRATION SYSTEMS) IN FORMS OR PACKINGS FOR RETAIL SALE.",
+            "confidence": 0.818
+          },
+          {
+            "hsCode": "30049000",
+            "description": "Medicaments, other (mixed or unmixed), for retail sale",
+            "confidence": 0.727
+          },
+          {
+            "hsCode": "37069000",
+            "description": "- Other CHEMICAL PREPARATIONS PHOTOGRAPHIC USES (OTHER THAN VARNISHES, GLUES, ADHESIVES AND SIMILAR PREPARATIONS); UNMIXED PRODUCTS FOR PHOTOGRAPHIC USES, PUT UP IN MEASURED PORTIONS OR PUT UP FOR RETAIL SALE IN A FORM READY FOR USE.",
+            "confidence": 0.636
+          },
+          {
+            "hsCode": "30021300",
+            "description": "- - Immunological products, unmixed, not put up in measured doses or in forms or packings for retail sale",
+            "confidence": 0.545
+          }
+        ],
+        "predictedHs": "30029000",
+        "confidence": 0.818,
+        "correctTop1": false,
+        "correctTop3": true,
+        "correctTop5": true,
+        "chapterMatch": true,
+        "headingMatch": false
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 25,
+        "engineVat": 0,
+        "engineSurtax": 0,
+        "engineExcise": 0,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": "Medicines Control Authority of Zimbabwe (MCAZ)",
+        "siReferences": [
+          "SI 122/2017",
+          "SI 35/2024"
+        ],
+        "notes": null
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": true,
+        "exportLicRequired": false,
+        "licenceRequired": true,
+        "licenceType": "MCAZ Import Permit",
+        "issuingAuthority": "Medicines Control Authority of Zimbabwe (MCAZ)",
+        "siReference": "SI 122/2017"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": false,
+        "threshold": 1000,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": false,
+        "surtaxRate": 0,
+        "category": null,
+        "si": null,
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    },
+    {
+      "sourceFile": "BOE-2024-003.xml",
+      "boeNumber": "BOE-ZW-2024-003",
+      "lineNumber": 7,
+      "description": "Beer made from malt, in bottles or cans, alcoholic content 4-6%",
+      "actualHs": "22030000",
+      "customsValue": 4800,
+      "xml": {
+        "dutyRate": 60,
+        "vatRate": 14.5,
+        "surtaxRate": null,
+        "exciseRate": 40
+      },
+      "classifier": {
+        "skipped": false,
+        "predictions": [
+          {
+            "hsCode": "22030000",
+            "description": "Beer made from malt",
+            "confidence": 0.4
+          },
+          {
+            "hsCode": "22030091",
+            "description": "- - - - Clear beer made from sorghum, wholly produced in Zimbabwe",
+            "confidence": 0.4
+          },
+          {
+            "hsCode": "65050000",
+            "description": "HATS AND OTHER HEADGEAR, KNITTED OR CROCHETED, OR MADE UP FROM LACE, FELT OR OTHER TEXTILE FABRIC, IN THE PIECE (BUT NOT IN STRIPS), WHETHER OR NOT LINED OR TRIMMED; HAIR-NETS OF ANY MATERIAL, WHETHER OR NOT LINED OR TRIMMED. OTHER HEADGEAR, WHETHER OR NOT LINED OR TRIMMED.",
+            "confidence": 0.4
+          },
+          {
+            "hsCode": "22030091",
+            "description": "- - - - Clear beer made from sorghum, wholly produced in Zimbabwe",
+            "confidence": 0.4
+          },
+          {
+            "hsCode": "04015000",
+            "description": "- Of a fat content, by weight, exceeding 10% MILK AND CREAM, CONCENTRATED ADDED SUGAR OR OTHER - In powder, granules or other solid exceeding 1.5% :",
+            "confidence": 0.3
+          }
+        ],
+        "predictedHs": "22030000",
+        "confidence": 0.4,
+        "correctTop1": true,
+        "correctTop3": true,
+        "correctTop5": true,
+        "chapterMatch": true,
+        "headingMatch": true
+      },
+      "tariff": {
+        "skipped": false,
+        "engineDuty": 60,
+        "engineVat": 14.5,
+        "engineSurtax": 0,
+        "engineExcise": 40,
+        "dutyMatch": true,
+        "vatMatch": true,
+        "surtaxMatch": true,
+        "exciseMatch": true,
+        "authority": null,
+        "siReferences": [
+          "SI 35/2024"
+        ],
+        "notes": "CBCA always required — alcoholic beverages"
+      },
+      "licence": {
+        "skipped": false,
+        "importLicRequired": false,
+        "exportLicRequired": false,
+        "licenceRequired": false,
+        "licenceType": null,
+        "issuingAuthority": null,
+        "siReference": "SI 35/2024"
+      },
+      "cbca": {
+        "skipped": false,
+        "cbcaRequired": true,
+        "cbcaAlways": true,
+        "threshold": null,
+        "siReference": "SI 35/2024",
+        "triggerNote": "CBCA declaration required for ALL shipments of this commodity — value is irrelevant"
+      },
+      "surtax": {
+        "skipped": false,
+        "surtaxApplicable": false,
+        "surtaxRate": 0,
+        "category": null,
+        "si": null,
+        "surtaxFlagMatch": true,
+        "surtaxRateMatch": true
+      }
+    }
+  ]
+}

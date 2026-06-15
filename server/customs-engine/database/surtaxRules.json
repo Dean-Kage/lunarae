@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "si_reference": "SI 50A/2025",
+    "effective_date": "2025-01-01",
+    "description": "Additional surtax rates imposed on selected imports to protect domestic industries. Surtax is calculated on the CIF value and added to the duty base before VAT.",
+    "calculation_basis": "CIF value"
+  },
+  "surtax_rates": [
+    {
+      "chapter": 52,
+      "headings": ["5208","5209","5210","5211","5212"],
+      "rate": 30,
+      "description": "Woven cotton fabrics",
+      "rationale": "Protect Zimbabwe textile industry",
+      "si_reference": "SI 50A/2025"
+    },
+    {
+      "chapter": 54,
+      "headings": ["5407","5408"],
+      "rate": 30,
+      "description": "Woven fabrics of man-made filaments",
+      "rationale": "Protect textile industry",
+      "si_reference": "SI 50A/2025"
+    },
+    {
+      "chapter": 55,
+      "headings": ["5512","5513","5514","5515","5516"],
+      "rate": 30,
+      "description": "Woven fabrics of man-made staple fibres",
+      "rationale": "Protect textile industry",
+      "si_reference": "SI 50A/2025"
+    },
+    {
+      "chapter": 61,
+      "headings": ["6101","6102","6103","6104","6105","6106","6107","6108","6109","6110","6111","6112","6113","6114","6115","6116","6117"],
+      "rate": 30,
+      "description": "Knitted or crocheted clothing articles",
+      "rationale": "Protect domestic garment manufacturing",
+      "si_reference": "SI 50A/2025"
+    },
+    {
+      "chapter": 62,
+      "headings": ["6201","6202","6203","6204","6205","6206","6207","6208","6209","6210","6211","6212","6213","6214","6215","6216","6217"],
+      "rate": 30,
+      "description": "Non-knitted clothing articles",
+      "rationale": "Protect domestic garment manufacturing",
+      "si_reference": "SI 50A/2025"
+    },
+    {
+      "chapter": 63,
+      "headings": ["6301","6302","6303","6304","6305","6306","6307","6308","6309","6310"],
+      "rate": 20,
+      "description": "Made-up textile articles, worn clothing",
+      "rationale": "Protect domestic textile sector",
+      "si_reference": "SI 50A/2025"
+    },
+    {
+      "chapter": 64,
+      "headings": ["6401","6402","6403","6404","6405"],
+      "rate": 20,
+      "description": "Footwear",
+      "rationale": "Protect domestic footwear manufacturers",
+      "si_reference": "SI 50A/2025"
+    },
+    {
+      "chapter": 85,
+      "headings": ["8525"],
+      "rate": 10,
+      "description": "Mobile phones and cellular handsets",
+      "rationale": "Revenue generation on consumer electronics",
+      "si_reference": "SI 50A/2025"
+    },
+    {
+      "chapter": 2,
+      "headings": ["0207"],
+      "rate": 20,
+      "description": "Frozen poultry",
+      "rationale": "Protect domestic poultry industry",
+      "si_reference": "SI 50A/2025"
+    },
+    {
+      "chapter": 19,
+      "headings": ["1901","1902","1903","1904","1905"],
+      "rate": 15,
+      "description": "Prepared cereal food products (pasta, pastry, cereals)",
+      "rationale": "Protect food processing industry",
+      "si_reference": "SI 50A/2025"
+    },
+    {
+      "chapter": 73,
+      "headings": ["7308","7309","7310","7311","7312","7313","7314","7315","7316","7317","7318","7319","7320","7321","7322","7323","7324","7325","7326"],
+      "rate": 10,
+      "description": "Iron and steel articles (excluding primary products)",
+      "rationale": "Protect domestic steel fabrication",
+      "si_reference": "SI 50A/2025"
+    },
+    {
+      "chapter": 76,
+      "headings": ["7608","7609","7610","7611","7612","7613","7614","7615","7616"],
+      "rate": 10,
+      "description": "Aluminium articles",
+      "rationale": "Protect domestic aluminium manufacturing",
+      "si_reference": "SI 50A/2025"
+    }
+  ],
+  "exempt_from_surtax": [
+    "Raw materials for domestic manufacture (rebate entry required)",
+    "Goods imported under diplomatic privilege",
+    "Goods imported under government-to-government agreements",
+    "Medical equipment and pharmaceutical products",
+    "Agricultural inputs (seeds, fertilisers, pesticides)",
+    "Capital goods for approved investment projects (rebate 185/340)"
+  ]
+}

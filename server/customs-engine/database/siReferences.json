@@ -1,0 +1,112 @@
+{
+  "si_library": [
+    {
+      "si_number": "SI 122/2017",
+      "title": "Customs and Excise (Import Control Regulations)",
+      "description": "Regulates import licences and permits for controlled goods entering Zimbabwe. Lists goods requiring import licence, licensing authorities and application procedures.",
+      "effective_date": "2017-09-01",
+      "status": "active",
+      "category": "import_control"
+    },
+    {
+      "si_number": "SI 35/2024",
+      "title": "Customs and Excise (Customs Border Control Area) Regulations",
+      "description": "Establishes requirements for Customs Border Control Area (CBCA) compliance. Goods with FOB value exceeding USD 1,000 and certain scheduled goods require CBCA clearance.",
+      "effective_date": "2024-02-01",
+      "status": "active",
+      "category": "cbca",
+      "key_provisions": [
+        "FOB threshold: USD 1,000",
+        "4th Schedule goods always require CBCA regardless of value",
+        "Non-compliance results in seizure of goods"
+      ]
+    },
+    {
+      "si_number": "SI 50A/2025",
+      "title": "Customs and Excise (Surtax) Regulations",
+      "description": "Imposes additional surtax on selected imported goods to protect domestic industries. Applies to textiles, clothing, footwear, certain electronics, and agricultural products.",
+      "effective_date": "2025-01-01",
+      "status": "active",
+      "category": "surtax"
+    },
+    {
+      "si_number": "SI 54/2024",
+      "title": "Control of Goods (Import and Export) (Prohibition) Order",
+      "description": "Prohibits importation and exportation of specified goods. Includes absolute prohibitions on military weapons, counterfeit currency, hazardous waste and other dangerous goods.",
+      "effective_date": "2024-03-01",
+      "status": "active",
+      "category": "prohibition"
+    },
+    {
+      "si_number": "SI 59/2026",
+      "title": "Control of Goods (Restriction) Regulations",
+      "description": "Restricts importation and exportation of goods requiring special permits. Includes firearms, explosives, certain chemicals, drugs, and strategic minerals.",
+      "effective_date": "2026-01-01",
+      "status": "active",
+      "category": "restriction"
+    },
+    {
+      "si_number": "SI 5/2023",
+      "title": "Minerals Marketing Corporation (Export Permits) Regulations",
+      "description": "Requires export permits for all minerals and mineral products. Administered by the Minerals Marketing Corporation of Zimbabwe (MMCZ). Includes gold, diamonds, platinum, chrome, lithium and other strategic minerals.",
+      "effective_date": "2023-01-15",
+      "status": "active",
+      "category": "export_control"
+    },
+    {
+      "si_number": "SI 157/2024",
+      "title": "Control of Goods (Motor Vehicle Import Restrictions) Regulations",
+      "description": "Restricts importation of second-hand motor vehicles beyond specified age limits. Right-hand drive requirement. Engine capacity restrictions for certain vehicle types.",
+      "effective_date": "2024-07-01",
+      "status": "active",
+      "category": "restriction",
+      "key_provisions": [
+        "Passenger vehicles: max 10 years old",
+        "Commercial vehicles: max 15 years old",
+        "All vehicles must be right-hand drive",
+        "Electric vehicles: exempt from age restriction"
+      ]
+    },
+    {
+      "si_number": "CBCA Act Chapter 23:02",
+      "title": "Customs and Excise Act (Chapter 23:02)",
+      "description": "Principal legislation governing customs and excise in Zimbabwe. Provides the legal framework for import/export duties, customs procedures, and enforcement.",
+      "effective_date": "2001-01-01",
+      "status": "active",
+      "category": "primary_legislation"
+    },
+    {
+      "si_number": "SI 163/2023",
+      "title": "Value Added Tax (Amendment) Regulations",
+      "description": "Amends VAT rate applicable to customs duty-inclusive values. Standard VAT rate is 14.5% applicable on the sum of CIF value, customs duty, surtax and any excise duty.",
+      "effective_date": "2024-01-01",
+      "status": "active",
+      "category": "vat"
+    },
+    {
+      "si_number": "SI 20/2022",
+      "title": "Customs and Excise (Tariff) Regulations (Amendment)",
+      "description": "Updates the tariff schedule with revised duty rates for various HS code chapters. Reflects Zimbabwe's obligations under SADC, COMESA and bilateral trade agreements.",
+      "effective_date": "2022-04-01",
+      "status": "active",
+      "category": "tariff"
+    },
+    {
+      "si_number": "SADC Protocol",
+      "title": "SADC Trade Protocol",
+      "description": "Southern African Development Community Trade Protocol providing preferential tariff rates for goods originating in SADC member states with valid Certificate of Origin (CO).",
+      "effective_date": "2008-01-01",
+      "status": "active",
+      "category": "trade_agreement",
+      "members": ["South Africa","Botswana","Zambia","Mozambique","Tanzania","Malawi","Namibia","Lesotho","Eswatini","DRC","Angola","Seychelles","Mauritius","Madagascar","Comoros"]
+    },
+    {
+      "si_number": "COMESA Protocol",
+      "title": "COMESA Common External Tariff",
+      "description": "Common Market for Eastern and Southern Africa preferential tariff rates for goods originating in COMESA member states with valid Certificate of Origin.",
+      "effective_date": "2000-10-31",
+      "status": "active",
+      "category": "trade_agreement"
+    }
+  ]
+}

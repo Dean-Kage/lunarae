@@ -1,0 +1,428 @@
+{
+  "generatedAt": "2026-06-15T08:54:26.375Z",
+  "datasetMeta": {
+    "extractedAt": "2026-06-15T08:54:10.593Z",
+    "sourceFiles": [
+      {
+        "file": "BOE-2024-001.xml",
+        "itemsExtracted": 5
+      },
+      {
+        "file": "BOE-2024-002.xml",
+        "itemsExtracted": 5
+      },
+      {
+        "file": "BOE-2024-003.xml",
+        "itemsExtracted": 7
+      }
+    ],
+    "totalItems": 17,
+    "withHsCode": 17,
+    "withDescription": 17,
+    "errors": 0
+  },
+  "totalItems": 17,
+  "classifier": {
+    "n": 17,
+    "top1Accuracy": {
+      "correct": 7,
+      "total": 17,
+      "pct": 41.2
+    },
+    "top3Accuracy": {
+      "correct": 12,
+      "total": 17,
+      "pct": 70.6
+    },
+    "top5Accuracy": {
+      "correct": 14,
+      "total": 17,
+      "pct": 82.4
+    },
+    "chapterAccuracy": {
+      "correct": 14,
+      "total": 17,
+      "pct": 82.4
+    },
+    "headingAccuracy": {
+      "correct": 11,
+      "total": 17,
+      "pct": 64.7
+    },
+    "confidenceDistribution": {
+      "mean": 0.626,
+      "median": 0.643,
+      "p25": 0.5,
+      "p75": 0.727,
+      "min": 0.364,
+      "max": 0.941
+    },
+    "mistakes": [
+      {
+        "actual": "84713000",
+        "predicted": "84433100",
+        "confidence": 0.4,
+        "description": "Portable automatic data processing machines, laptops, weight"
+      },
+      {
+        "actual": "85285200",
+        "predicted": "84433200",
+        "confidence": 0.455,
+        "description": "Monitors, LCD flat panel display units for use with ADP mach"
+      },
+      {
+        "actual": "85414090",
+        "predicted": "85413000",
+        "confidence": 0.575,
+        "description": "Photovoltaic cells and solar modules, for electricity genera"
+      },
+      {
+        "actual": "61091000",
+        "predicted": "62069000",
+        "confidence": 0.727,
+        "description": "T-shirts, singlets and other vests of cotton, knitted or cro"
+      },
+      {
+        "actual": "52081200",
+        "predicted": "52085900",
+        "confidence": 0.941,
+        "description": "Plain woven fabrics of cotton, 85% or more cotton by weight,"
+      },
+      {
+        "actual": "64039110",
+        "predicted": "64029900",
+        "confidence": 0.857,
+        "description": "Footwear with outer soles of rubber or plastics, uppers of l"
+      },
+      {
+        "actual": "63092000",
+        "predicted": "63090000",
+        "confidence": 0.75,
+        "description": "Used or second-hand clothing of other textile materials, sor"
+      },
+      {
+        "actual": "20712000",
+        "predicted": "02071200",
+        "confidence": 0.556,
+        "description": "Frozen whole chickens, not cut up, of domestic fowl"
+      },
+      {
+        "actual": "87032319",
+        "predicted": "87031000",
+        "confidence": 0.643,
+        "description": "Passenger motor vehicles, spark-ignition internal combustion"
+      },
+      {
+        "actual": "30049000",
+        "predicted": "30029000",
+        "confidence": 0.818,
+        "description": "Medicaments, mixed or unmixed, for therapeutic use, packaged"
+      }
+    ],
+    "confusedPairs": [
+      {
+        "pair": "84713000 → 84433100",
+        "count": 1
+      },
+      {
+        "pair": "85285200 → 84433200",
+        "count": 1
+      },
+      {
+        "pair": "85414090 → 85413000",
+        "count": 1
+      },
+      {
+        "pair": "61091000 → 62069000",
+        "count": 1
+      },
+      {
+        "pair": "52081200 → 52085900",
+        "count": 1
+      },
+      {
+        "pair": "64039110 → 64029900",
+        "count": 1
+      },
+      {
+        "pair": "63092000 → 63090000",
+        "count": 1
+      },
+      {
+        "pair": "20712000 → 02071200",
+        "count": 1
+      },
+      {
+        "pair": "87032319 → 87031000",
+        "count": 1
+      },
+      {
+        "pair": "30049000 → 30029000",
+        "count": 1
+      }
+    ],
+    "lowConfidenceCorrect": [
+      {
+        "actualHs": "27101941",
+        "confidence": 0.364,
+        "description": "Diesel fuel (gas oil), automotive, sulphur content not excee"
+      },
+      {
+        "actualHs": "22030000",
+        "confidence": 0.4,
+        "description": "Beer made from malt, in bottles or cans, alcoholic content 4"
+      }
+    ],
+    "highConfidenceWrong": [
+      {
+        "actualHs": "61091000",
+        "predictedHs": "62069000",
+        "confidence": 0.727,
+        "description": "T-shirts, singlets and other vests of cotton, knitted or cro"
+      },
+      {
+        "actualHs": "52081200",
+        "predictedHs": "52085900",
+        "confidence": 0.941,
+        "description": "Plain woven fabrics of cotton, 85% or more cotton by weight,"
+      },
+      {
+        "actualHs": "64039110",
+        "predictedHs": "64029900",
+        "confidence": 0.857,
+        "description": "Footwear with outer soles of rubber or plastics, uppers of l"
+      },
+      {
+        "actualHs": "63092000",
+        "predictedHs": "63090000",
+        "confidence": 0.75,
+        "description": "Used or second-hand clothing of other textile materials, sor"
+      },
+      {
+        "actualHs": "30049000",
+        "predictedHs": "30029000",
+        "confidence": 0.818,
+        "description": "Medicaments, mixed or unmixed, for therapeutic use, packaged"
+      }
+    ]
+  },
+  "tariff": {
+    "n": 16,
+    "dutyAccuracy": {
+      "correct": 16,
+      "total": 16,
+      "pct": 100
+    },
+    "vatAccuracy": {
+      "correct": 16,
+      "total": 16,
+      "pct": 100
+    },
+    "surtaxAccuracy": {
+      "correct": 16,
+      "total": 16,
+      "pct": 100
+    },
+    "exciseAccuracy": {
+      "correct": 16,
+      "total": 16,
+      "pct": 100
+    },
+    "discrepancies": []
+  },
+  "licence": {
+    "n": 16,
+    "requiresLicence": {
+      "count": 4,
+      "pct": 25
+    },
+    "hasAuthority": {
+      "count": 10,
+      "pct": 62.5
+    },
+    "hasLicenceType": {
+      "count": 4,
+      "pct": 25
+    },
+    "licenceItems": [
+      {
+        "hsCode": "10059000",
+        "importReq": true,
+        "exportReq": true,
+        "type": "GMB Import/Export Permit",
+        "authority": "Grain Marketing Board",
+        "si": "SI 122/2017"
+      },
+      {
+        "hsCode": "27101941",
+        "importReq": true,
+        "exportReq": false,
+        "type": "Petroleum Import Licence",
+        "authority": "Ministry of Energy and Power Development",
+        "si": "SI 122/2017"
+      },
+      {
+        "hsCode": "31021000",
+        "importReq": true,
+        "exportReq": false,
+        "type": "Fertiliser Import Permit",
+        "authority": "Ministry of Agriculture — Fertiliser Inspectorate",
+        "si": "SI 122/2017"
+      },
+      {
+        "hsCode": "30049000",
+        "importReq": true,
+        "exportReq": false,
+        "type": "MCAZ Import Permit",
+        "authority": "Medicines Control Authority of Zimbabwe (MCAZ)",
+        "si": "SI 122/2017"
+      }
+    ]
+  },
+  "cbca": {
+    "n": 16,
+    "cbcaRequiredCount": {
+      "count": 14,
+      "pct": 87.5
+    },
+    "cbcaAlwaysCount": {
+      "count": 3,
+      "pct": 18.8
+    },
+    "cbcaThresholdCount": {
+      "count": 11,
+      "pct": 68.8
+    },
+    "cbcaItems": [
+      {
+        "hsCode": "85252010",
+        "always": false,
+        "threshold": 1000,
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      {
+        "hsCode": "84713000",
+        "always": false,
+        "threshold": 1000,
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      {
+        "hsCode": "85285200",
+        "always": false,
+        "threshold": 1000,
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      {
+        "hsCode": "85176200",
+        "always": false,
+        "threshold": 1000,
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      {
+        "hsCode": "61091000",
+        "always": false,
+        "threshold": 1000,
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      {
+        "hsCode": "62031200",
+        "always": false,
+        "threshold": 1000,
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      {
+        "hsCode": "52081200",
+        "always": false,
+        "threshold": 1000,
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      {
+        "hsCode": "64039110",
+        "always": false,
+        "threshold": 1000,
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      {
+        "hsCode": "63092000",
+        "always": false,
+        "threshold": 1000,
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      {
+        "hsCode": "10059000",
+        "always": false,
+        "threshold": 1000,
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      {
+        "hsCode": "27101941",
+        "always": true,
+        "threshold": null,
+        "triggerNote": "CBCA declaration required for ALL shipments of this commodity — value is irrelevant"
+      },
+      {
+        "hsCode": "87032319",
+        "always": true,
+        "threshold": null,
+        "triggerNote": "CBCA declaration required for ALL shipments of this commodity — value is irrelevant"
+      },
+      {
+        "hsCode": "30049000",
+        "always": false,
+        "threshold": 1000,
+        "triggerNote": "CBCA declaration required when FOB value exceeds USD 1000"
+      },
+      {
+        "hsCode": "22030000",
+        "always": true,
+        "threshold": null,
+        "triggerNote": "CBCA declaration required for ALL shipments of this commodity — value is irrelevant"
+      }
+    ]
+  },
+  "surtax": {
+    "n": 16,
+    "flagAccuracy": {
+      "correct": 16,
+      "total": 16,
+      "pct": 100
+    },
+    "rateAccuracy": {
+      "correct": 16,
+      "total": 16,
+      "pct": 100
+    },
+    "surtaxItems": [
+      {
+        "hsCode": "85252010",
+        "rate": 10,
+        "category": "Electronics and electrical equipment"
+      },
+      {
+        "hsCode": "61091000",
+        "rate": 30,
+        "category": "Knitted or crocheted clothing"
+      },
+      {
+        "hsCode": "62031200",
+        "rate": 30,
+        "category": "Woven clothing accessories"
+      },
+      {
+        "hsCode": "52081200",
+        "rate": 30,
+        "category": "Cotton fabrics"
+      },
+      {
+        "hsCode": "64039110",
+        "rate": 20,
+        "category": "Footwear"
+      },
+      {
+        "hsCode": "63092000",
+        "rate": 30,
+        "category": "Made-up textile articles"
+      }
+    ]
+  }
+}

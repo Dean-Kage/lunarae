@@ -1,0 +1,220 @@
+{
+  "_meta": {
+    "si_references": ["SI 54/2024","SI 59/2026","SI 5/2023","SI 157/2024"],
+    "description": "Prohibited and restricted goods for import/export into Zimbabwe"
+  },
+  "prohibited_imports": [
+    {
+      "category": "Counterfeit currency",
+      "hs_codes": ["4907"],
+      "si_reference": "SI 54/2024",
+      "reason": "Absolute prohibition — criminal offence under Money Laundering and Proceeds of Crime Act",
+      "penalty": "Seizure, forfeiture, criminal prosecution"
+    },
+    {
+      "category": "Hazardous waste",
+      "hs_codes": ["3825"],
+      "si_reference": "SI 54/2024",
+      "reason": "Zimbabwe signatory to Basel Convention on transboundary waste movement",
+      "penalty": "Seizure, forfeiture, criminal prosecution, USD 50,000+ fine"
+    },
+    {
+      "category": "Pornographic materials",
+      "hs_codes": ["4901","4902","4903","8523"],
+      "si_reference": "SI 54/2024",
+      "reason": "Prohibited under Censorship and Entertainment Controls Act Chapter 10:04",
+      "penalty": "Seizure and prosecution"
+    },
+    {
+      "category": "Asbestos (crocidolite/blue asbestos)",
+      "hs_codes": ["2524"],
+      "si_reference": "SI 54/2024",
+      "reason": "Banned under Rotterdam Convention; severe health hazard",
+      "penalty": "Seizure and heavy fines"
+    },
+    {
+      "category": "PCBs and PBBs (polychlorinated biphenyls)",
+      "hs_codes": ["29036300"],
+      "si_reference": "SI 54/2024",
+      "reason": "Stockholm Convention persistent organic pollutants",
+      "penalty": "Seizure, forfeiture, prosecution"
+    },
+    {
+      "category": "Illicit drugs and narcotics",
+      "hs_codes": ["2939","2941"],
+      "si_reference": "SI 54/2024",
+      "reason": "Narcotics and Psychotropic Substances Act Chapter 15:12",
+      "penalty": "Seizure, prosecution, imprisonment up to 20 years"
+    }
+  ],
+  "prohibited_exports": [
+    {
+      "category": "Uncut diamonds (non-KP certified)",
+      "hs_codes": ["71023100","71023900"],
+      "si_reference": "SI 54/2024",
+      "reason": "Kimberley Process — uncertified rough diamonds prohibited",
+      "penalty": "Seizure, heavy fines, criminal prosecution"
+    },
+    {
+      "category": "CITES Appendix I species (live animals/plants)",
+      "hs_codes": ["0101","0102","0103","0104","0105","0106"],
+      "si_reference": "SI 54/2024",
+      "reason": "CITES Convention; Parks and Wildlife Act Chapter 20:14",
+      "penalty": "Seizure, prosecution, imprisonment"
+    },
+    {
+      "category": "Hazardous waste",
+      "hs_codes": ["3825"],
+      "si_reference": "SI 54/2024",
+      "reason": "Basel Convention — prohibited transboundary hazardous waste export",
+      "penalty": "Criminal prosecution"
+    }
+  ],
+  "restricted_imports": [
+    {
+      "category": "Firearms and ammunition",
+      "hs_codes": ["9301","9302","9303","9304","9305","9306","9307"],
+      "si_reference": "SI 59/2026",
+      "permit_authority": "Zimbabwe Republic Police",
+      "permit_type": "Firearms Import Permit",
+      "notes": "Separate permits required for dealer, sports, security; private import heavily restricted"
+    },
+    {
+      "category": "Explosives",
+      "hs_codes": ["3601","3602","3603","3604","3605","3606"],
+      "si_reference": "SI 59/2026",
+      "permit_authority": "Zimbabwe Republic Police — Explosives Regulator",
+      "permit_type": "Explosives Import Licence",
+      "notes": "Mining explosives additionally require Ministry of Mines Inspectorate sign-off"
+    },
+    {
+      "category": "Pharmaceuticals and controlled medicines",
+      "hs_codes": ["3001","3002","3003","3004","3005","3006"],
+      "si_reference": "SI 59/2026",
+      "permit_authority": "Medicines Control Authority of Zimbabwe (MCAZ)",
+      "permit_type": "MCAZ Import Permit",
+      "notes": "Product must be MCAZ-registered; importer must be MCAZ-licensed"
+    },
+    {
+      "category": "Controlled chemicals (precursors)",
+      "hs_codes": ["2905","2903","29031500","38085210"],
+      "si_reference": "SI 59/2026",
+      "permit_authority": "Environmental Management Agency (EMA)",
+      "permit_type": "Controlled Chemical Import Permit",
+      "notes": "Dual-use chemicals; import quantity and end-use monitored"
+    },
+    {
+      "category": "Motor vehicles (second-hand) — age restricted",
+      "hs_codes": ["8701","8702","8703","8704","8705"],
+      "si_reference": "SI 157/2024",
+      "permit_authority": "Zimbabwe Revenue Authority",
+      "permit_type": "Vehicle Age Compliance Declaration",
+      "notes": "Passenger vehicles max 10 years; commercial max 15 years; must be RHD; EVs exempt from age limit"
+    },
+    {
+      "category": "Ozone-depleting substances",
+      "hs_codes": ["2903"],
+      "si_reference": "SI 59/2026",
+      "permit_authority": "Environmental Management Agency (EMA)",
+      "permit_type": "ODS Import Permit",
+      "notes": "Montreal Protocol; annual quota assigned per importer"
+    },
+    {
+      "category": "Genetically modified organisms",
+      "hs_codes": ["1001","1005","1201","1204","1205","1206","1207"],
+      "si_reference": "SI 59/2026",
+      "permit_authority": "Ministry of Agriculture — Biotechnology Authority of Zimbabwe",
+      "permit_type": "GMO Import Permit",
+      "notes": "Zimbabwe has strict GMO controls; research permits available; food aid GMOs handled case-by-case"
+    }
+  ],
+  "restricted_exports": [
+    {
+      "category": "Gold",
+      "hs_codes": ["71081100","71081200","71081300","71082000"],
+      "si_reference": "SI 5/2023",
+      "permit_authority": "Minerals Marketing Corporation of Zimbabwe (MMCZ)",
+      "permit_type": "MMCZ Export Permit",
+      "notes": "All gold must first be sold to Fidelity Gold Refinery (subsidiary of RBZ); retail gold export requires MMCZ permit"
+    },
+    {
+      "category": "Diamonds",
+      "hs_codes": ["71021000","71023100","71023900","71041000","71042000"],
+      "si_reference": "SI 5/2023",
+      "permit_authority": "MMCZ / Zimbabwe Consolidated Diamond Company",
+      "permit_type": "MMCZ Export Permit + Kimberley Process Certificate",
+      "notes": "KP certificate mandatory for all rough diamond exports"
+    },
+    {
+      "category": "Platinum group metals",
+      "hs_codes": ["71101100","71101900","71110000","71121000"],
+      "si_reference": "SI 5/2023",
+      "permit_authority": "Minerals Marketing Corporation of Zimbabwe (MMCZ)",
+      "permit_type": "MMCZ Export Permit",
+      "notes": "Zimbabwe is world's 2nd largest platinum producer; all PGM exports through MMCZ"
+    },
+    {
+      "category": "Lithium and lithium products",
+      "hs_codes": ["28258000","26019000","26190000"],
+      "si_reference": "SI 5/2023",
+      "permit_authority": "Minerals Marketing Corporation of Zimbabwe (MMCZ)",
+      "permit_type": "Strategic Mineral Export Permit",
+      "notes": "Zimbabwe has Arcadia and Bikita lithium deposits; raw lithium export requires MMCZ; value addition encouraged"
+    },
+    {
+      "category": "Chrome ore",
+      "hs_codes": ["26100000"],
+      "si_reference": "SI 5/2023",
+      "permit_authority": "Minerals Marketing Corporation of Zimbabwe (MMCZ)",
+      "permit_type": "MMCZ Export Permit",
+      "notes": "Zimbabwe has Great Dyke chrome belt; raw ore export restricted; ferrochrome export preferred"
+    },
+    {
+      "category": "Iron and steel scrap",
+      "hs_codes": ["72041000","72042100","72042900","72043000","72044100","72044900","72045000"],
+      "si_reference": "SI 5/2023",
+      "permit_authority": "Ministry of Industry and Commerce",
+      "permit_type": "Scrap Metal Export Permit",
+      "notes": "Policy restricts scrap exports to support local steel industry; ZISCO and other mills given priority access"
+    },
+    {
+      "category": "Unprocessed tobacco",
+      "hs_codes": ["24011000","24012000","24013000"],
+      "si_reference": "SI 5/2023",
+      "permit_authority": "Tobacco Industry and Marketing Board (TIMB)",
+      "permit_type": "TIMB Export Permit",
+      "notes": "Zimbabwe is major tobacco exporter; all leaf tobacco exports must be registered with TIMB and auctioned/contracted"
+    },
+    {
+      "category": "Wildlife and wildlife products",
+      "hs_codes": ["0106","01062000","43010000"],
+      "si_reference": "SI 59/2026",
+      "permit_authority": "Zimbabwe Parks and Wildlife Management Authority",
+      "permit_type": "CITES Export Permit",
+      "notes": "CITES listed species; elephant ivory trade subject to international moratorium"
+    }
+  ],
+  "vehicle_age_limits": {
+    "si_reference": "SI 157/2024",
+    "passenger_vehicles": {
+      "max_age_years": 10,
+      "hs_headings": ["8703"],
+      "notes": "Age calculated from year of manufacture to year of import"
+    },
+    "commercial_vehicles": {
+      "max_age_years": 15,
+      "hs_headings": ["8701","8702","8704","8705"],
+      "notes": "Includes trucks, buses, and special purpose vehicles"
+    },
+    "motorcycles": {
+      "max_age_years": 10,
+      "hs_headings": ["8711"]
+    },
+    "electric_vehicles": {
+      "max_age_years": null,
+      "hs_headings": ["87038000","87048000"],
+      "notes": "EVs are exempt from age restrictions per SI 157/2024 to encourage clean energy transition"
+    },
+    "drive_side_requirement": "Right-hand drive (RHD) only — Zimbabwe drives on the left"
+  }
+}

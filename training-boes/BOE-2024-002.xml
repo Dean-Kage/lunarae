@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ASYCUDA World SAD — BOE-ZW-2024-002 — Clothing, textiles and footwear from China -->
+<Declaration>
+  <FunctionCode>9</FunctionCode>
+  <TypeCode>IM</TypeCode>
+  <ID>BOE-ZW-2024-002</ID>
+  <IssueDateTime>
+    <DateTimeString>20240418090000+0200</DateTimeString>
+  </IssueDateTime>
+  <GoodsItemQuantity>5</GoodsItemQuantity>
+  <TotalGrossMassMeasure unitCode="KGM">3800</TotalGrossMassMeasure>
+  <DeclarationOffice>
+    <ID>ZWBEI</ID>
+    <Name>Beitbridge Border Post</Name>
+  </DeclarationOffice>
+  <Exporter>
+    <Name>Guangzhou Textile Export Co. Ltd</Name>
+    <Address>
+      <Line>88 Industrial Zone, Guangzhou</Line>
+      <CountryCode>CN</CountryCode>
+    </Address>
+  </Exporter>
+  <Declarant>
+    <Name>Lunarae Customs Agents</Name>
+    <ID>ZWCL88201</ID>
+  </Declarant>
+  <Importer>
+    <Name>ZimFashion Wholesale Ltd</Name>
+    <ID>ZW2024-IMP-002</ID>
+  </Importer>
+  <GoodsShipment>
+    <TransactionNatureCode>1</TransactionNatureCode>
+    <CountryOfDestinationCode>ZW</CountryOfDestinationCode>
+    <ExportCountry>
+      <ID>CN</ID>
+    </ExportCountry>
+
+    <!-- Item 1: Cotton T-shirts -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>1</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">3200</StatisticalValueAmount>
+      <Commodity>
+        <Description>T-shirts, singlets and other vests of cotton, knitted or crocheted, men's</Description>
+        <Classification>
+          <ID>61091000</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">650</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">600</NetNetWeightMeasure>
+          <TariffQuantity>1200</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">3200</AdValoremTaxBaseAmount>
+        <RateNumeric>40</RateNumeric>
+        <PayableTaxAmount currencyID="USD">1280</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>SUX</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">3200</AdValoremTaxBaseAmount>
+        <RateNumeric>30</RateNumeric>
+        <PayableTaxAmount currencyID="USD">960</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">5440</AdValoremTaxBaseAmount>
+        <RateNumeric>14.5</RateNumeric>
+        <PayableTaxAmount currencyID="USD">788.80</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 2: Men's suits of synthetic fibres -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>2</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">5600</StatisticalValueAmount>
+      <Commodity>
+        <Description>Men's suits of synthetic fibres, woven, not knitted</Description>
+        <Classification>
+          <ID>62031200</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">480</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">450</NetNetWeightMeasure>
+          <TariffQuantity>400</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">5600</AdValoremTaxBaseAmount>
+        <RateNumeric>40</RateNumeric>
+        <PayableTaxAmount currencyID="USD">2240</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>SUX</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">5600</AdValoremTaxBaseAmount>
+        <RateNumeric>30</RateNumeric>
+        <PayableTaxAmount currencyID="USD">1680</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">9520</AdValoremTaxBaseAmount>
+        <RateNumeric>14.5</RateNumeric>
+        <PayableTaxAmount currencyID="USD">1380.40</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 3: Plain woven cotton fabric -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>3</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">2800</StatisticalValueAmount>
+      <Commodity>
+        <Description>Plain woven fabrics of cotton, 85% or more cotton by weight, not more than 200g/m2, unbleached</Description>
+        <Classification>
+          <ID>52081200</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">900</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">880</NetNetWeightMeasure>
+          <TariffQuantity>1500</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">2800</AdValoremTaxBaseAmount>
+        <RateNumeric>40</RateNumeric>
+        <PayableTaxAmount currencyID="USD">1120</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>SUX</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">2800</AdValoremTaxBaseAmount>
+        <RateNumeric>30</RateNumeric>
+        <PayableTaxAmount currencyID="USD">840</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">4760</AdValoremTaxBaseAmount>
+        <RateNumeric>14.5</RateNumeric>
+        <PayableTaxAmount currencyID="USD">690.20</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 4: Leather footwear -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>4</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">4100</StatisticalValueAmount>
+      <Commodity>
+        <Description>Footwear with outer soles of rubber or plastics, uppers of leather, covering ankle, other</Description>
+        <Classification>
+          <ID>64039110</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">820</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">790</NetNetWeightMeasure>
+          <TariffQuantity>600</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">4100</AdValoremTaxBaseAmount>
+        <RateNumeric>40</RateNumeric>
+        <PayableTaxAmount currencyID="USD">1640</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>SUX</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">4100</AdValoremTaxBaseAmount>
+        <RateNumeric>20</RateNumeric>
+        <PayableTaxAmount currencyID="USD">820</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">6560</AdValoremTaxBaseAmount>
+        <RateNumeric>14.5</RateNumeric>
+        <PayableTaxAmount currencyID="USD">951.20</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 5: Used clothing (second-hand) -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>5</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">950</StatisticalValueAmount>
+      <Commodity>
+        <Description>Used or second-hand clothing of other textile materials, sorted and baled</Description>
+        <Classification>
+          <ID>63092000</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">950</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">930</NetNetWeightMeasure>
+          <TariffQuantity>950</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">950</AdValoremTaxBaseAmount>
+        <RateNumeric>40</RateNumeric>
+        <PayableTaxAmount currencyID="USD">380</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>SUX</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">950</AdValoremTaxBaseAmount>
+        <RateNumeric>30</RateNumeric>
+        <PayableTaxAmount currencyID="USD">285</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">1615</AdValoremTaxBaseAmount>
+        <RateNumeric>14.5</RateNumeric>
+        <PayableTaxAmount currencyID="USD">234.18</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+  </GoodsShipment>
+</Declaration>

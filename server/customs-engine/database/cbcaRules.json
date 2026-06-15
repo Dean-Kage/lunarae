@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "si_reference": "SI 35/2024",
+    "fob_threshold_usd": 1000,
+    "description": "Customs Border Control Area rules. Goods with FOB > USD 1,000 require CBCA clearance unless exempted. Some goods always require CBCA regardless of value (cbca_always=true)."
+  },
+  "threshold": {
+    "currency": "USD",
+    "amount": 1000,
+    "basis": "FOB"
+  },
+  "always_required_chapters": [22, 24, 27, 87, 93],
+  "always_required_headings": ["2203","2204","2205","2206","2207","2208","2402","2403","2709","2710","2711","8701","8702","8703","8704","8705","8706","8707","8708","9301","9302","9303","9304","9305","9306","3601","3602","3603","3604","3605","3606"],
+  "always_required_reasons": {
+    "22": "Alcoholic beverages — always CBCA regardless of value (excise goods)",
+    "24": "Tobacco products — always CBCA regardless of value (excise goods)",
+    "27": "Petroleum products — always CBCA (strategic goods / excise)",
+    "87": "Motor vehicles — always CBCA (high-value regulated goods)",
+    "93": "Arms and ammunition — always CBCA (security clearance required)",
+    "3601": "Explosives — always CBCA",
+    "3602": "Prepared explosives — always CBCA",
+    "3603": "Detonators — always CBCA"
+  },
+  "exemptions": [
+    {
+      "description": "Goods intended for diplomatic missions",
+      "condition": "Importer is an accredited diplomatic mission"
+    },
+    {
+      "description": "Goods for government/defence force use",
+      "condition": "Supported by Ministry of Finance exemption letter"
+    },
+    {
+      "description": "Personal effects on change of residence",
+      "condition": "Importer returning resident with proof of domicile change",
+      "fob_limit": null
+    },
+    {
+      "description": "Trade samples with no commercial value",
+      "condition": "FOB value below USD 50 and marked as samples"
+    }
+  ],
+  "cbca_goods_categories": [
+    "Foodstuffs",
+    "Beverages (alcoholic and non-alcoholic)",
+    "Tobacco and tobacco products",
+    "Petroleum and petroleum products",
+    "Motor vehicles (all types)",
+    "Textiles, clothing and footwear (when FOB > USD 1,000)",
+    "Electronics (when FOB > USD 1,000)",
+    "Machinery (when FOB > USD 1,000)",
+    "Arms, ammunition and explosives (always)",
+    "Pharmaceutical products (when FOB > USD 1,000)"
+  ],
+  "cbca_process": {
+    "step1": "Pre-arrival notification to ZIMRA within 48 hours of vessel departure",
+    "step2": "Submit cargo manifest to CBCA office",
+    "step3": "Goods scanned/inspected at designated CBCA post",
+    "step4": "Customs officer issues clearance certificate",
+    "step5": "Goods released to bonded warehouse pending full duty payment",
+    "penalties": {
+      "failure_to_notify": "USD 500 minimum fine per consignment",
+      "goods_seizure": "Non-compliant goods subject to seizure and forfeiture",
+      "agent_liability": "Clearing agent jointly liable for CBCA non-compliance"
+    }
+  }
+}

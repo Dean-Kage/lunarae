@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ASYCUDA World SAD — BOE-ZW-2024-003 — Food, fuel, agriculture, minerals and vehicles -->
+<Declaration>
+  <FunctionCode>9</FunctionCode>
+  <TypeCode>IM</TypeCode>
+  <ID>BOE-ZW-2024-003</ID>
+  <IssueDateTime>
+    <DateTimeString>20240525080000+0200</DateTimeString>
+  </IssueDateTime>
+  <GoodsItemQuantity>7</GoodsItemQuantity>
+  <TotalGrossMassMeasure unitCode="KGM">52000</TotalGrossMassMeasure>
+  <DeclarationOffice>
+    <ID>ZWFOR</ID>
+    <Name>Forbes Border Post</Name>
+  </DeclarationOffice>
+  <Exporter>
+    <Name>Agri-Trade Southern Africa Ltd</Name>
+    <Address>
+      <Line>45 Commercial Road, Maputo</Line>
+      <CountryCode>MZ</CountryCode>
+    </Address>
+  </Exporter>
+  <Declarant>
+    <Name>Lunarae Customs Agents</Name>
+    <ID>ZWCL88201</ID>
+  </Declarant>
+  <Importer>
+    <Name>Zimgrain Trading Ltd</Name>
+    <ID>ZW2024-IMP-003</ID>
+  </Importer>
+  <GoodsShipment>
+    <TransactionNatureCode>1</TransactionNatureCode>
+    <CountryOfDestinationCode>ZW</CountryOfDestinationCode>
+    <ExportCountry>
+      <ID>MZ</ID>
+    </ExportCountry>
+
+    <!-- Item 1: Maize (corn) -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>1</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">15000</StatisticalValueAmount>
+      <Commodity>
+        <Description>Maize (corn), other than seed maize, for human consumption</Description>
+        <Classification>
+          <ID>10059000</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">20000</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">20000</NetNetWeightMeasure>
+          <TariffQuantity>20000</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">15000</AdValoremTaxBaseAmount>
+        <RateNumeric>5</RateNumeric>
+        <PayableTaxAmount currencyID="USD">750</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">15750</AdValoremTaxBaseAmount>
+        <RateNumeric>0</RateNumeric>
+        <PayableTaxAmount currencyID="USD">0</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 2: Diesel fuel -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>2</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">25000</StatisticalValueAmount>
+      <Commodity>
+        <Description>Diesel fuel (gas oil), automotive, sulphur content not exceeding 50 ppm</Description>
+        <Classification>
+          <ID>27101941</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">21000</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">21000</NetNetWeightMeasure>
+          <TariffQuantity>25000</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">25000</AdValoremTaxBaseAmount>
+        <RateNumeric>10</RateNumeric>
+        <PayableTaxAmount currencyID="USD">2500</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>EXC</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">25000</AdValoremTaxBaseAmount>
+        <RateNumeric>30</RateNumeric>
+        <PayableTaxAmount currencyID="USD">7500</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">35000</AdValoremTaxBaseAmount>
+        <RateNumeric>14.5</RateNumeric>
+        <PayableTaxAmount currencyID="USD">5075</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 3: Urea fertiliser -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>3</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">8500</StatisticalValueAmount>
+      <Commodity>
+        <Description>Urea, whether or not in aqueous solution, for agricultural use as fertiliser</Description>
+        <Classification>
+          <ID>31021000</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">5000</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">5000</NetNetWeightMeasure>
+          <TariffQuantity>5000</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">8500</AdValoremTaxBaseAmount>
+        <RateNumeric>0</RateNumeric>
+        <PayableTaxAmount currencyID="USD">0</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">8500</AdValoremTaxBaseAmount>
+        <RateNumeric>0</RateNumeric>
+        <PayableTaxAmount currencyID="USD">0</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 4: Frozen whole chickens -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>4</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">3200</StatisticalValueAmount>
+      <Commodity>
+        <Description>Frozen whole chickens, not cut up, of domestic fowl</Description>
+        <Classification>
+          <ID>02071200</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">1500</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">1500</NetNetWeightMeasure>
+          <TariffQuantity>1500</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">3200</AdValoremTaxBaseAmount>
+        <RateNumeric>40</RateNumeric>
+        <PayableTaxAmount currencyID="USD">1280</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>SUX</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">3200</AdValoremTaxBaseAmount>
+        <RateNumeric>20</RateNumeric>
+        <PayableTaxAmount currencyID="USD">640</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">5120</AdValoremTaxBaseAmount>
+        <RateNumeric>0</RateNumeric>
+        <PayableTaxAmount currencyID="USD">0</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 5: Passenger motor vehicle (sedan, 1.8L petrol) -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>5</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">22000</StatisticalValueAmount>
+      <Commodity>
+        <Description>Passenger motor vehicles, spark-ignition internal combustion engine, cylinder capacity 1500cc to 3000cc, other</Description>
+        <Classification>
+          <ID>87032319</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">1850</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">1650</NetNetWeightMeasure>
+          <TariffQuantity>1</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">22000</AdValoremTaxBaseAmount>
+        <RateNumeric>40</RateNumeric>
+        <PayableTaxAmount currencyID="USD">8800</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">30800</AdValoremTaxBaseAmount>
+        <RateNumeric>14.5</RateNumeric>
+        <PayableTaxAmount currencyID="USD">4466</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 6: Medicaments (retail packs) -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>6</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">9800</StatisticalValueAmount>
+      <Commodity>
+        <Description>Medicaments, mixed or unmixed, for therapeutic use, packaged for retail sale</Description>
+        <Classification>
+          <ID>30049000</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">400</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">380</NetNetWeightMeasure>
+          <TariffQuantity>400</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">9800</AdValoremTaxBaseAmount>
+        <RateNumeric>25</RateNumeric>
+        <PayableTaxAmount currencyID="USD">2450</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">12250</AdValoremTaxBaseAmount>
+        <RateNumeric>0</RateNumeric>
+        <PayableTaxAmount currencyID="USD">0</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+    <!-- Item 7: Beer (malt) -->
+    <GovernmentAgencyGoodsItem>
+      <SequenceNumeric>7</SequenceNumeric>
+      <StatisticalValueAmount currencyID="USD">4800</StatisticalValueAmount>
+      <Commodity>
+        <Description>Beer made from malt, in bottles or cans, alcoholic content 4-6%</Description>
+        <Classification>
+          <ID>22030000</ID>
+          <IdentificationTypeCode>TSP</IdentificationTypeCode>
+        </Classification>
+        <GoodsMeasure>
+          <GrossMassMeasure unitCode="KGM">2400</GrossMassMeasure>
+          <NetNetWeightMeasure unitCode="KGM">2200</NetNetWeightMeasure>
+          <TariffQuantity>2400</TariffQuantity>
+        </GoodsMeasure>
+      </Commodity>
+      <GovernmentProcedure>
+        <CurrentCode>40</CurrentCode>
+        <PreviousCode>00</PreviousCode>
+      </GovernmentProcedure>
+      <DutyTaxFee>
+        <TypeCode>CUS</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">4800</AdValoremTaxBaseAmount>
+        <RateNumeric>60</RateNumeric>
+        <PayableTaxAmount currencyID="USD">2880</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>EXC</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">4800</AdValoremTaxBaseAmount>
+        <RateNumeric>40</RateNumeric>
+        <PayableTaxAmount currencyID="USD">1920</PayableTaxAmount>
+      </DutyTaxFee>
+      <DutyTaxFee>
+        <TypeCode>VAT</TypeCode>
+        <AdValoremTaxBaseAmount currencyID="USD">9600</AdValoremTaxBaseAmount>
+        <RateNumeric>14.5</RateNumeric>
+        <PayableTaxAmount currencyID="USD">1392</PayableTaxAmount>
+      </DutyTaxFee>
+    </GovernmentAgencyGoodsItem>
+
+  </GoodsShipment>
+</Declaration>
