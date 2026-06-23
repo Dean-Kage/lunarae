@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useAuth } from "../context/AuthContext.jsx";
+import ClassificationReviewModal from "../components/review/ClassificationReviewModal.jsx";
 
 /* ═══════════════════════════════════════════════════════════════════
    ZIMBABWE HS CODE + CBCA/LICENCE KNOWLEDGE BASE
@@ -456,7 +457,12 @@ function enrichWithKnowledgeBase(result, rbzRate) {
 
   const enriched = (result.line_items || []).map(item => {
     const kb = lookupHS(item.hs_code);
-    if (!kb) return item;
+    if (!kb) {
+      // Normalize AI-returned duty_rate: AI sometimes returns 40 (percent) instead of 0.40 (decimal)
+      const raw = Number(item.duty_rate || 0);
+      const normDuty = raw > 1.5 ? raw / 100 : raw;
+      return { ...item, duty_rate: normDuty, confidence: 70 };
+    }
 
     // Recalculate with correct duty rate from KB
     const fob = item.fob_value_usd || 0;
@@ -486,6 +492,7 @@ function enrichWithKnowledgeBase(result, rbzRate) {
       cbca_required: cbca,
       import_licence_required: licence,
       compliance_status: status,
+      confidence: 97,
     };
   });
 
@@ -730,6 +737,7 @@ export default function LunaraeV2({ onNavigate }) {
   const [error, setError]         = useState(null);
   const [pdfLoading, setPdfLoading] = useState(false);
   const [xmlLoading, setXmlLoading] = useState(false);
+  const [reviewItem, setReviewItem] = useState(null);
   const [dragging, setDragging]   = useState(false);
   const [view, setView]           = useState("input");
   const [fileLoading, setFileLoading] = useState(false);
@@ -940,6 +948,7 @@ Return ONLY: {"line_items":[...]}`;
   const readyColor = result?.ready_to_register ? "#22c55e" : "#f59e0b";
 
   return (
+    <>
     <div style={{ fontFamily:"'Inter',-apple-system,sans-serif", background:"#080d18", minHeight:"100vh", color:"#e2e8f0", display:"flex", flexDirection:"column" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -1291,7 +1300,7 @@ Return ONLY: {"line_items":[...]}`;
                     <table style={{ width:"100%", borderCollapse:"collapse", fontSize:11 }}>
                       <thead>
                         <tr style={{ background:"#080d18" }}>
-                          {["#","Description","HS Code","Qty","CIF","Duty%","Duty","VAT","Total","CBCA","Lic","Status"].map(h=>(
+                          {["#","Description","HS Code","Qty","CIF","Duty%","Duty","VAT","Total","CBCA","Lic","Status","Conf","Review"].map(h=>(
                             <th key={h} style={{ textAlign:"left", padding:"10px 10px", color:"#475569", fontSize:9, fontWeight:600, letterSpacing:".1em", textTransform:"uppercase", borderBottom:"1px solid #1e2d47", whiteSpace:"nowrap" }}>{h}</th>
                           ))}
                         </tr>
@@ -1329,6 +1338,28 @@ Return ONLY: {"line_items":[...]}`;
                                   {item.compliance_status}
                                 </span>
                               </td>
+                              <td style={{ padding:"8px 10px", whiteSpace:"nowrap" }}>
+                                {(() => {
+                                  const conf = item.confidence ?? 70;
+                                  const cc = conf >= 95 ? "#4ade80" : conf >= 80 ? "#e9ba4c" : "#f87171";
+                                  return (
+                                    <span style={{ display:"inline-flex", alignItems:"center", gap:3, padding:"2px 8px", borderRadius:20, fontSize:9, fontWeight:700, background:cc+"18", color:cc, border:`1px solid ${cc}35` }}>
+                                      <span style={{ width:4, height:4, borderRadius:"50%", background:cc, flexShrink:0 }} />
+                                      {conf}%
+                                    </span>
+                                  );
+                                })()}
+                              </td>
+                              <td style={{ padding:"8px 10px" }}>
+                                <button
+                                  onClick={() => setReviewItem(item)}
+                                  style={{ background:"rgba(96,165,250,0.1)", border:"1px solid rgba(96,165,250,0.3)", borderRadius:6, padding:"3px 8px", fontSize:9, fontWeight:600, color:"#60a5fa", cursor:"pointer", whiteSpace:"nowrap" }}
+                                  onMouseEnter={e=>{ e.currentTarget.style.background="rgba(96,165,250,0.2)"; e.currentTarget.style.borderColor="rgba(96,165,250,0.5)" }}
+                                  onMouseLeave={e=>{ e.currentTarget.style.background="rgba(96,165,250,0.1)"; e.currentTarget.style.borderColor="rgba(96,165,250,0.3)" }}
+                                >
+                                  Review
+                                </button>
+                              </td>
                             </tr>
                           );
                         })}
@@ -1363,5 +1394,14 @@ Return ONLY: {"line_items":[...]}`;
         </main>
       </div>
     </div>
+
+    {reviewItem && (
+      <ClassificationReviewModal
+        item={reviewItem}
+        userFullName={user?.full_name || ""}
+        onClose={() => setReviewItem(null)}
+      />
+    )}
+    </>
   );
 }

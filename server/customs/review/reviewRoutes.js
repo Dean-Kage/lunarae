@@ -72,6 +72,21 @@ router.get('/stats', async (req, res) => {
   }
 });
 
+// GET /api/customs/review/all
+// Query params: limit, offset, status (any status), search
+router.get('/all', async (req, res) => {
+  try {
+    const limit  = Math.min(parseInt(req.query.limit  || '50'), 200);
+    const offset = parseInt(req.query.offset || '0');
+    const status = req.query.status || null;
+    const search = req.query.search || null;
+    const result = await reviewStore.getAll({ limit, offset, status, search });
+    return ok(res, result);
+  } catch (e) {
+    return fail(res, 500, e.message);
+  }
+});
+
 // POST /api/customs/review/classify
 // Classify a description through the full review workflow (learning + routing + persist).
 // Body: { description }

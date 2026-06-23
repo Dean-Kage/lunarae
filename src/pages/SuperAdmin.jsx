@@ -10,6 +10,9 @@ import {
 } from 'lucide-react'
 import RecentActivityWidget, { AuditKpiWidgets, MostActiveUsersWidget } from '../components/activity/RecentActivityWidget.jsx'
 import ActivityCenter from './ActivityCenter.jsx'
+import ExecutiveDashboard from '../components/executive/ExecutiveDashboard.jsx'
+import ReviewCenter    from '../components/review/ReviewCenter.jsx'
+import ShadowDashboard from '../components/shadow/ShadowDashboard.jsx'
 
 /* ── Responsive hook ──────────────────────────────────────── */
 function useIsMobile(bp = 768) {
@@ -1240,6 +1243,18 @@ function SectionActivityCenter() {
   return <ActivityCenter />
 }
 
+function SectionExecutive() {
+  return <ExecutiveDashboard />
+}
+
+function SectionReviews() {
+  return <ReviewCenter />
+}
+
+function SectionShadow() {
+  return <ShadowDashboard />
+}
+
 const SECTIONS = [
   { id: 'dashboard',       label: 'Dashboard',        Icon: LayoutDashboard },
   { id: 'analytics',       label: 'Analytics',         Icon: BarChart2       },
@@ -1249,6 +1264,9 @@ const SECTIONS = [
   { id: 'payments',        label: 'Payments',          Icon: Wallet          },
   { id: 'boe_activity',    label: 'BOE Activity',      Icon: FileText        },
   { id: 'activity_center', label: 'Activity Center',   Icon: Activity        },
+  { id: 'executive',        label: 'Executive Intel',   Icon: TrendingUp      },
+  { id: 'reviews',          label: 'HS Reviews',        Icon: CheckCircle     },
+  { id: 'shadow',           label: 'Shadow Analytics',  Icon: Database        },
   { id: 'audit_logs',      label: 'Audit Logs',        Icon: Shield          },
   { id: 'settings',        label: 'System Settings',   Icon: Settings        },
   { id: 'support',         label: 'Support',           Icon: HelpCircle      },
@@ -1476,6 +1494,9 @@ export default function SuperAdmin({ onNavigate }) {
             {section === 'payments'        && <SectionPayments />}
             {section === 'boe_activity'    && <SectionBoeActivity />}
             {section === 'activity_center' && <SectionActivityCenter />}
+            {section === 'executive'       && <SectionExecutive />}
+            {section === 'reviews'         && <SectionReviews />}
+            {section === 'shadow'          && <SectionShadow />}
             {section === 'audit_logs'      && <SectionLogs />}
             {section === 'settings'        && <SectionSettings />}
             {section === 'support'         && <SectionSupport />}

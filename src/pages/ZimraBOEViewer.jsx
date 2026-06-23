@@ -236,6 +236,98 @@ function parseXML(xmlStr) {
   };
 }
 
+/* ─── XML serializer — round-trips through parseXML ─── */
+function buildXML(fd) {
+  const esc = v => String(v ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const el  = (tag, val) => `<${tag}>${esc(val)}</${tag}>`;
+  const itemsXML = (fd.items || []).map(item => {
+    const taxXML = (item.taxLines || []).filter(t => t.code || t.amount).map(t =>
+      `      <Taxation_line>${el('Duty_tax_code',t.code)}${el('Duty_tax_Base',t.base)}${el('Duty_tax_rate',t.rate)}${el('Duty_tax_amount',t.amount)}${el('Duty_tax_MP',t.mp)}</Taxation_line>`
+    ).join('\n');
+    return `  <Item>
+    ${el('Number_of_packages',item.numPkgs)}
+    ${el('Kind_of_packages_code',item.kindCode)}
+    ${el('Kind_of_packages_name',item.kindName)}
+    ${el('Marks1_of_packages',item.marks)}
+    ${el('Commodity_code',item.commCode)}
+    ${el('Precision_1',item.prec1)}
+    ${el('Extended_customs_procedure',item.extProc)}
+    ${el('National_customs_procedure',item.natProc)}
+    ${el('Item_price',item.itemPrice)}
+    ${el('Description_of_goods',item.descGoods)}
+    ${el('Commercial_Description',item.commDesc)}
+    ${el('Gross_weight_itm',item.grossWt)}
+    ${el('Net_weight_itm',item.netWt)}
+    ${el('Statistical_value',item.statVal)}
+    ${el('Country_of_origin_code',item.origCode)}
+    ${el('Licence_number',item.licNo)}
+    ${el('Rate_of_adjustement',item.adj)}
+    ${el('Value_item',item.valueItem)}
+    <Previous_doc>${el('Summary_declaration',item.summDecl)}${el('Summary_declaration_sl',item.summDeclSl)}</Previous_doc>
+${taxXML}
+    ${el('Item_taxes_amount',item.itemTaxTotal)}
+  </Item>`;
+  }).join('\n');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<ASYCUDA_Declaration>
+  ${el('Customs_clearance_office_code',fd.officeCode)}
+  ${el('Customs_Clearance_office_name',fd.officeName)}
+  ${el('Type_of_declaration',fd.declType)}
+  ${el('Declaration_gen_procedure_code',fd.genProc)}
+  ${el('Number_of_the_form',fd.forms)}
+  ${el('Total_number_of_forms',fd.totalForms)}
+  ${el('Total_number_of_items',fd.totalItems)}
+  ${el('Total_number_of_packages',fd.totalPkgs)}
+  <Declarant>${el('Number',fd.declarantRef)}</Declarant>
+  ${el('Exporter_name',fd.exporterName)}
+  ${el('Consignee_name',fd.consigneeName)}
+  ${el('Declarant_code',fd.declarantCode)}
+  ${el('Declarant_name',fd.declarantName)}
+  ${el('Export_country_name',fd.exportCountry)}
+  ${el('Export_country_code',fd.exportCountryCode)}
+  ${el('Destination_country_name',fd.destCountry)}
+  ${el('Destination_country_code',fd.destCountryCode)}
+  ${el('Trading_country',fd.tradingCountry)}
+  ${el('Country_first_destination',fd.firstDest)}
+  ${el('Country_of_origin_name',fd.originCountry)}
+  ${el('Value_details',fd.valueDetails)}
+  ${el('Mode',fd.transportMode)}
+  ${el('Location_of_goods',fd.locationGoods)}
+  <Delivery_terms>
+    ${el('Code',fd.delivCode)}
+    ${el('Place',fd.delivPlace)}
+  </Delivery_terms>
+  <Border_information>
+    ${el('Identity',fd.borderId)}
+    ${el('Nationality',fd.borderNat)}
+  </Border_information>
+  <Departure_arrival_information>
+    ${el('Identity',fd.arrId)}
+    ${el('Nationality',fd.arrNat)}
+  </Departure_arrival_information>
+  <Gs_Invoice>
+    ${el('Currency_code',fd.invCurrency)}
+    ${el('Currency_rate',fd.invRate)}
+    ${el('Amount_foreign_currency',fd.invAmtFCX)}
+    ${el('Amount_national_currency',fd.invAmtZWG)}
+  </Gs_Invoice>
+  <Gs_internal_freight>
+    ${el('Amount_foreign_currency',fd.frtAmtFCX)}
+    ${el('Amount_national_currency',fd.frtAmtZWG)}
+  </Gs_internal_freight>
+  <Gs_insurance>
+    ${el('Amount_foreign_currency',fd.insAmtFCX)}
+    ${el('Amount_national_currency',fd.insAmtZWG)}
+  </Gs_insurance>
+  ${el('Total_CIF',fd.totalCIF)}
+  ${el('Total_cost',fd.totalCost)}
+  ${el('Mode_of_payment',fd.paymentMode)}
+  ${el('Deffered_payment_reference',fd.deferredRef)}
+${itemsXML}
+</ASYCUDA_Declaration>`;
+}
+
 /* ═══════════════════════════════════════════════════════════════════
    RESPONSIVE LAYOUT ENGINE HOOK & REUSABLE LAYOUT UTILS
 ═══════════════════════════════════════════════════════════════════ */
@@ -550,7 +642,7 @@ function TbSep() {
   return <div style={{ width:1, height:20, background: T.border, margin:"0 2px" }}/>; 
 }
 
-function Toolbar({ onLoad }) {
+function Toolbar({ onLoad, onExport, onSave }) {
   return (
     <div style={{ background:"linear-gradient(to bottom,#fafafa,#f0f0f0)",
       borderBottom:`1px solid ${T.border}`, padding:"5px 12px",
@@ -558,8 +650,8 @@ function Toolbar({ onLoad }) {
       <TbBtn icon={Eye} label="View"/>
       <TbBtn icon={ShieldCheck} label="Validate" primary/>
       <TbBtn icon={FileInput} label="Import XML" onClick={onLoad}/>
-      <TbBtn icon={FileOutput} label="Export XML"/>
-      <TbBtn icon={Save} label="Save" primary/>
+      <TbBtn icon={FileOutput} label="Export XML" onClick={onExport}/>
+      <TbBtn icon={Save} label="Save" primary onClick={onSave}/>
       <TbBtn icon={Printer} label="Print"/>
       <TbSep/>
       <TbBtn icon={Copy} label="Copy"/>
@@ -1355,36 +1447,184 @@ function StatusBar({ fileName }) {
   );
 }
 
+/* ─── Save status indicator ─── */
+function SaveIndicator({ status }) {
+  if (!status) return null;
+  const conf = {
+    unsaved: { color:'#f59e0b', dot:'#f59e0b', label:'Unsaved Changes' },
+    saving:  { color:T.primary, dot:T.primary, label:'Saving…'         },
+    saved:   { color:T.success, dot:T.success, label:'Saved'           },
+  }[status];
+  if (!conf) return null;
+  return (
+    <div style={{ display:'flex', alignItems:'center', gap:5, fontSize:11, color:conf.color, fontWeight:600, whiteSpace:'nowrap' }}>
+      <span style={{ width:7, height:7, borderRadius:'50%', background:conf.dot, display:'inline-block', flexShrink:0 }}/>
+      {conf.label}
+    </div>
+  );
+}
+
+/* ─── Draft recovery modal ─── */
+function DraftRecoveryModal({ draft, onRestore, onDiscard }) {
+  const savedAt = draft?.savedAt ? new Date(draft.savedAt) : null;
+  const timeStr = savedAt ? savedAt.toLocaleTimeString([], { hour:'2-digit', minute:'2-digit' }) : '';
+  const dateStr = savedAt ? savedAt.toLocaleDateString() : '';
+  return (
+    <div style={{ position:'fixed', inset:0, zIndex:9999, background:'rgba(0,0,0,0.5)', display:'flex', alignItems:'center', justifyContent:'center', padding:16 }}>
+      <div style={{ background:'#fff', border:`1px solid ${T.border}`, borderRadius:8, padding:24, maxWidth:440, width:'100%', boxShadow:'0 16px 48px rgba(0,0,0,0.22)', fontFamily:T.font }}>
+        <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:16 }}>
+          <div style={{ width:38, height:38, borderRadius:'50%', background:'#fef3c7', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+            <AlertCircle size={18} color='#f59e0b'/>
+          </div>
+          <div>
+            <div style={{ fontSize:14, fontWeight:700, color:T.text }}>Unsaved Changes Found</div>
+            <div style={{ fontSize:11, color:T.textMuted, marginTop:2 }}>Auto-saved on {dateStr} at {timeStr}</div>
+          </div>
+        </div>
+        <div style={{ padding:'10px 14px', borderRadius:6, background:'#f0fdf4', border:'1px solid #bbf7d0', fontSize:12, color:T.green, marginBottom:20, lineHeight:1.5 }}>
+          Your previous edits were recovered. Restore to continue where you left off, or discard to reload the original file.
+        </div>
+        <div style={{ display:'flex', gap:8, justifyContent:'flex-end' }}>
+          <button onClick={onDiscard}
+            style={{ padding:'8px 18px', border:`1px solid ${T.border}`, borderRadius:T.radius, background:'#fff', fontFamily:T.font, fontSize:12, fontWeight:600, color:T.textMuted, cursor:'pointer' }}>
+            Discard Draft
+          </button>
+          <button onClick={onRestore}
+            style={{ padding:'8px 18px', border:'none', borderRadius:T.radius, background:T.primary, fontFamily:T.font, fontSize:12, fontWeight:700, color:'#fff', cursor:'pointer' }}>
+            Restore Draft
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ═══════════════════════════════════════════════════════════════════
    MAIN APP
 ═══════════════════════════════════════════════════════════════════ */
 export default function ZimraBOEViewer() {
-  const [fd, setFd] = useState(null);
-  const [tab, setTab] = useState("S.A.D.");
-  const [dragging, setDrag] = useState(false);
-  const [error, setError] = useState("");
-  const [fileName, setFileName] = useState("");
-  const fileRef = useRef();
+  const [fd,            setFd]           = useState(null);
+  const [tab,           setTab]          = useState("S.A.D.");
+  const [dragging,      setDrag]         = useState(false);
+  const [error,         setError]        = useState("");
+  const [fileName,      setFileName]     = useState("");
+  const [saveStatus,    setSaveStatus]   = useState(null); // null | 'unsaved' | 'saving' | 'saved'
+  const [draftModal,    setDraftModal]   = useState(false);
+  const [pendingParsed, setPendingParsed] = useState(null);
+  const [pendingDraft,  setPendingDraft]  = useState(null);
+  const fileRef       = useRef();
+  const isInitialLoad = useRef(false);
   const isMobile = useMediaQuery("(max-width:768px)");
 
   const upd = (f, v) => setFd(p => ({ ...p, [f]: v }));
 
+  /* ── Draft storage key ─────────────────────────────────────── */
+  function draftKey(data, name) {
+    const ref = data?.declarantRef?.trim();
+    return 'sad_draft_' + (ref || name || 'new');
+  }
+
+  /* ── Auto-save: fires 5 s after any fd change ──────────────── */
+  useEffect(() => {
+    if (!fd) return;
+    if (isInitialLoad.current) { isInitialLoad.current = false; return; }
+    setSaveStatus('unsaved');
+    const t = setTimeout(() => {
+      setSaveStatus('saving');
+      try {
+        localStorage.setItem(draftKey(fd, fileName), JSON.stringify({ fd, fileName, savedAt: Date.now() }));
+        setSaveStatus('saved');
+      } catch(e) { setSaveStatus('unsaved'); }
+    }, 5000);
+    return () => clearTimeout(t);
+  }, [fd, fileName]);
+
+  /* ── Helpers ───────────────────────────────────────────────── */
+  function applyParsed(parsed) {
+    isInitialLoad.current = true;
+    setFd(parsed);
+    setTab("S.A.D.");
+    setSaveStatus(null);
+  }
+
+  /* ── Load XML file ─────────────────────────────────────────── */
   const loadFile = f => {
-    if (!f) return; setError("");
-    setFileName(f.name);
+    if (!f) return;
+    setError("");
+    const name = f.name;
+    setFileName(name);
     const r = new FileReader();
     r.onload = e => {
-      try { setFd(parseXML(e.target.result)); setTab("S.A.D."); }
-      catch(err) { setError("XML parse error: " + err.message); }
+      try {
+        const parsed = parseXML(e.target.result);
+        const key    = draftKey(parsed, name);
+        const raw    = localStorage.getItem(key);
+        if (raw) {
+          try {
+            setPendingParsed(parsed);
+            setPendingDraft(JSON.parse(raw));
+            setDraftModal(true);
+          } catch { applyParsed(parsed); }
+        } else {
+          applyParsed(parsed);
+        }
+      } catch(err) { setError("XML parse error: " + err.message); }
     };
     r.readAsText(f);
   };
+
+  /* ── Draft modal actions ───────────────────────────────────── */
+  function restoreDraft() {
+    if (!pendingDraft?.fd) return;
+    isInitialLoad.current = true;
+    setFd(pendingDraft.fd);
+    if (pendingDraft.fileName) setFileName(pendingDraft.fileName);
+    setTab("S.A.D.");
+    setSaveStatus('saved');
+    setDraftModal(false);
+  }
+
+  function discardDraft() {
+    if (pendingParsed) localStorage.removeItem(draftKey(pendingParsed, fileName));
+    applyParsed(pendingParsed);
+    setDraftModal(false);
+  }
+
+  /* ── Manual save to localStorage ──────────────────────────── */
+  function handleSave() {
+    if (!fd) return;
+    setSaveStatus('saving');
+    try {
+      localStorage.setItem(draftKey(fd, fileName), JSON.stringify({ fd, fileName, savedAt: Date.now() }));
+      setSaveStatus('saved');
+    } catch(e) { setSaveStatus('unsaved'); }
+  }
+
+  /* ── Export — download XML built from current state ────────── */
+  function handleExport() {
+    if (!fd) return;
+    const xml  = buildXML(fd);
+    const blob = new Blob([xml], { type:'application/xml;charset=utf-8' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href     = url;
+    a.download = fileName ? fileName.replace(/\.xml$/i, '_edited.xml') : 'sad_export.xml';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
 
   const TABS = ["S.A.D.", "Val. Note", "Asmt. Notice", "Info. Page", "Scan. Doc.", "ASW Scan. Doc."];
 
   return (
     <div style={{ display:"flex", flexDirection:"column", height:"100vh",
       background: T.bg, fontFamily: T.font, fontSize:12, overflow:"hidden" }}>
+
+      {/* Draft recovery overlay */}
+      {draftModal && pendingDraft && (
+        <DraftRecoveryModal draft={pendingDraft} onRestore={restoreDraft} onDiscard={discardDraft}/>
+      )}
 
       {/* ── Window title bar — Windows 11 style ── */}
       <div style={{ background:"#1c1c1c", padding:"6px 12px",
@@ -1442,7 +1682,8 @@ export default function ZimraBOEViewer() {
           </span>
           {fileName && !isMobile && <span style={{ fontSize:11, color: T.textMuted, fontWeight:400 }}>({fileName})</span>}
         </div>
-        <div style={{ display:"flex", gap:6 }}>
+        <div style={{ display:"flex", gap:8, alignItems:"center" }}>
+          {fd && <SaveIndicator status={saveStatus}/>}
           <button onClick={() => fileRef.current?.click()}
             style={{ ...tbBtnBase, width: isMobile ? "100%" : "auto", justifyContent: "center", minHeight: isMobile ? 44 : 30, background: T.primary, color:"#fff", borderColor: T.primary, fontWeight:600 }}>
             <FolderOpen size={13}/> Load XML
@@ -1456,7 +1697,7 @@ export default function ZimraBOEViewer() {
       </div>
 
       {/* ── Toolbar ── */}
-      <Toolbar onLoad={() => fileRef.current?.click()}/>
+      <Toolbar onLoad={() => fileRef.current?.click()} onExport={handleExport} onSave={handleSave}/>
 
       {/* ── Canvas ── */}
       <div style={{ flex:1, overflow:"auto", background: T.bg, padding: isMobile ? "6px" : "12px" }}>

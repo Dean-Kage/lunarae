@@ -123,6 +123,30 @@ async function getStats() {
   return { ...counts, total, accuracy };
 }
 
+// All reviews with optional status/search filter — used by admin review center
+async function getAll({ limit = 50, offset = 0, status, search } = {}) {
+  const params = [];
+  let where = 'WHERE 1=1';
+  if (status) { where += ' AND status = ?'; params.push(status); }
+  if (search) { where += ' AND (description LIKE ? OR suggested_hs LIKE ?)'; params.push(`%${search}%`, `%${search}%`); }
+
+  const [rows] = await db.query(
+    `SELECT id, description, suggested_hs, confidence, all_predictions,
+            approved_hs, reviewed_by, review_date, status, notes, created_at
+     FROM classification_reviews ${where}
+     ORDER BY
+       FIELD(status,'pending_review','pending_warning','approved','auto_approved','rejected'),
+       created_at DESC
+     LIMIT ? OFFSET ?`,
+    [...params, limit, offset]
+  );
+  const [[{ total }]] = await db.query(
+    `SELECT COUNT(*) AS total FROM classification_reviews ${where}`,
+    params
+  );
+  return { items: rows.map(parseRow), total: Number(total), limit, offset };
+}
+
 // All approved/auto-approved rows — used by the learning engine
 async function getApprovedReviews() {
   const [rows] = await db.query(
@@ -142,4 +166,4 @@ function parseRow(row) {
   return row;
 }
 
-module.exports = { initTable, insertReview, approve, reject, getById, getPending, getStats, getApprovedReviews };
+module.exports = { initTable, insertReview, approve, reject, getById, getPending, getAll, getStats, getApprovedReviews };
